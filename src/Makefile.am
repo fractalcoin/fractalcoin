@@ -22,8 +22,8 @@ if BUILD_BITCOIN_CLI
   bin_PROGRAMS += fractalcoin-cli
 endif
 
-SUBDIRS = . $(BUILD_QT) $(BUILD_TEST)
-DIST_SUBDIRS = . qt test
+SUBDIRS = . $(BUILD_QT)
+DIST_SUBDIRS = . qt
 .PHONY: FORCE
 # bitcoin core #
 BITCOIN_CORE_H = \
