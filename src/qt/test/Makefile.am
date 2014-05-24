@@ -5,8 +5,8 @@ AM_CPPFLAGS += -I$(top_srcdir)/src \
   -I$(top_builddir)/src/qt \
   $(PROTOBUF_CFLAGS) \
     $(QR_CFLAGS)
-bin_PROGRAMS = test_fractalcoin-qt
-TESTS = test_fractalcoin-qt
+bin_PROGRAMS = test_dogecoin-qt
+TESTS = test_dogecoin-qt
 
 TEST_QT_MOC_CPP = \
   moc_bitcoinunitstests.cpp \
@@ -24,32 +24,32 @@ TEST_QT_H = \
 
 BUILT_SOURCES = $(TEST_QT_MOC_CPP)
 
-test_fractalcoin_qt_CPPFLAGS = $(AM_CPPFLAGS) $(QT_INCLUDES) $(QT_TEST_INCLUDES)
+test_dogecoin_qt_CPPFLAGS = $(AM_CPPFLAGS) $(QT_INCLUDES) $(QT_TEST_INCLUDES)
 
-test_fractalcoin_qt_SOURCES = \
+test_dogecoin_qt_SOURCES = \
   bitcoinunitstests.cpp \
   test_main.cpp \
   uritests.cpp \
   $(TEST_QT_H)
 if ENABLE_WALLET
-test_fractalcoin_qt_SOURCES += \
+test_dogecoin_qt_SOURCES += \
   paymentservertests.cpp
 endif
 
-nodist_test_fractalcoin_qt_SOURCES = $(TEST_QT_MOC_CPP)
+nodist_test_dogecoin_qt_SOURCES = $(TEST_QT_MOC_CPP)
 
-test_fractalcoin_qt_LDADD = $(LIBBITCOINQT)
+test_dogecoin_qt_LDADD = $(LIBBITCOINQT)
 if ENABLE_WALLET
-test_fractalcoin_qt_LDADD += $(LIBBITCOIN_WALLET) $(LIBBITCOIN_SERVER_WALLET)
+test_dogecoin_qt_LDADD += $(LIBBITCOIN_WALLET) $(LIBBITCOIN_SERVER_WALLET)
 endif
-test_fractalcoin_qt_LDADD += $(LIBBITCOIN_SERVER)
+test_dogecoin_qt_LDADD += $(LIBBITCOIN_SERVER)
 if ENABLE_WALLET
-test_fractalcoin_qt_LDADD += $(LIBBITCOIN_SERVER_WALLET)
+test_dogecoin_qt_LDADD += $(LIBBITCOIN_SERVER_WALLET)
 endif
-test_fractalcoin_qt_LDADD += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) \
+test_dogecoin_qt_LDADD += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) \
   ${RPCWALLET} $(LIBLEVELDB) \
   $(LIBMEMENV) $(BOOST_LIBS) $(QT_DBUS_LIBS) $(QT_TEST_LIBS) $(QT_LIBS) \
   $(QR_LIBS) $(PROTOBUF_LIBS) $(BDB_LIBS)
-test_fractalcoin_qt_LDFLAGS = $(QT_LDFLAGS)
+test_dogecoin_qt_LDFLAGS = $(QT_LDFLAGS)
 
 CLEANFILES = $(BUILT_SOURCES) *.gcda *.gcno

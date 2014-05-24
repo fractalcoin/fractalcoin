@@ -3,13 +3,13 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About fractalcoin Core</source>
-        <translation>Over fractalcoin Core</translation>
+        <source>About Dogecoin Core</source>
+        <translation>Over Dogecoin Core</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;fractalcoin Core&lt;/b&gt; version</source>
-        <translation>&lt;b&gt; fractalcoin Core&lt;/b&gt; versie</translation>
+        <source>&lt;b&gt;Dogecoin Core&lt;/b&gt; version</source>
+        <translation>&lt;b&gt; Dogecoin Core&lt;/b&gt; versie</translation>
     </message>
     <message>
         <location line="+57"/>
@@ -33,8 +33,8 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     </message>
     <message>
         <location line="+0"/>
-        <source>The fractalcoin Core developers</source>
-        <translation>De fractalcoin Core ontwikkelaars</translation>
+        <source>The Dogecoin Core developers</source>
+        <translation>De Dogecoin Core ontwikkelaars</translation>
     </message>
 </context>
 <context>
@@ -121,13 +121,13 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     </message>
     <message>
         <location line="+7"/>
-        <source>These are your fractalcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Dit zijn uw opgeslagen adressen om betalingen naar te verzenden. Controleer altijd het bedrag en het ontvangende adres voordat u uw fractalcoins verzendt.</translation>
+        <source>These are your Dogecoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Dit zijn uw opgeslagen adressen om betalingen naar te verzenden. Controleer altijd het bedrag en het ontvangende adres voordat u uw dogecoins verzendt.</translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>These are your fractalcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Dit zijn uw fractalcoin adressen om betalingen te ontvangen. We raden u aan om een nieuw ontvangstadres voor iedere transactie te gebruiken.</translation>
+        <source>These are your Dogecoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Dit zijn uw Dogecoin adressen om betalingen te ontvangen. We raden u aan om een nieuw ontvangstadres voor iedere transactie te gebruiken.</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -247,8 +247,8 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR fractalCOINS&lt;/b&gt;!</source>
-        <translation>Waarschuwing: Als u uw portemonnee versleutelt en uw wachtwoord vergeet, zult u &lt;b&gt;AL UW fractalCOINS KWIJT RAKEN&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR DOGECOINS&lt;/b&gt;!</source>
+        <translation>Waarschuwing: Als u uw portemonnee versleutelt en uw wachtwoord vergeet, zult u &lt;b&gt;AL UW DOGECOINS KWIJT RAKEN&lt;/b&gt;!</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -274,8 +274,8 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     </message>
     <message>
         <location line="-56"/>
-        <source>fractalcoin Core will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your fractalcoins from being stolen by malware infecting your computer.</source>
-        <translation>fractalcoin zal nu afsluiten om het versleutelingsproces te voltooien. Onthoud dat het versleutelen van uw portemonnee u niet volledig kan beschermen: Malware kan uw computer infecteren en uw fractalcoins stelen.</translation>
+        <source>Dogecoin Core will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your Dogecoins from being stolen by malware infecting your computer.</source>
+        <translation>Dogecoin zal nu afsluiten om het versleutelingsproces te voltooien. Onthoud dat het versleutelen van uw portemonnee u niet volledig kan beschermen: Malware kan uw computer infecteren en uw dogecoins stelen.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -368,8 +368,8 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     </message>
     <message>
         <location line="+7"/>
-        <source>Show information about fractalcoin Core</source>
-        <translation>Laat informatie zien over fractalcoin</translation>
+        <source>Show information about Dogecoin Core</source>
+        <translation>Laat informatie zien over Dogecoin</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -429,13 +429,13 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     </message>
     <message>
         <location line="-405"/>
-        <source>Send coins to a fractalcoin address</source>
-        <translation>Verzend munten naar een fractalcoin adres</translation>
+        <source>Send coins to a Dogecoin address</source>
+        <translation>Verzend munten naar een Dogecoin adres</translation>
     </message>
     <message>
         <location line="+49"/>
-        <source>Modify configuration options for fractalcoin Core</source>
-        <translation>Wijzig instellingen van fractalcoin</translation>
+        <source>Modify configuration options for Dogecoin Core</source>
+        <translation>Wijzig instellingen van Dogecoin</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -464,8 +464,8 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     </message>
     <message>
         <location line="+430"/>
-        <source>fractalcoin</source>
-        <translation>fractalcoin</translation>
+        <source>Dogecoin</source>
+        <translation>Dogecoin</translation>
     </message>
     <message>
         <location line="-643"/>
@@ -500,13 +500,13 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign messages with your fractalcoin addresses to prove you own them</source>
-        <translation>Onderteken berichten met uw fractalcoin adressen om te bewijzen dat u deze adressen bezit</translation>
+        <source>Sign messages with your Dogecoin addresses to prove you own them</source>
+        <translation>Onderteken berichten met uw Dogecoin adressen om te bewijzen dat u deze adressen bezit</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified fractalcoin addresses</source>
-        <translation>Verifiëer handtekeningen om zeker te zijn dat de berichten zijn ondertekend met de gespecificeerde fractalcoin adressen</translation>
+        <source>Verify messages to ensure they were signed with specified Dogecoin addresses</source>
+        <translation>Verifiëer handtekeningen om zeker te zijn dat de berichten zijn ondertekend met de gespecificeerde Dogecoin adressen</translation>
     </message>
     <message>
         <location line="+48"/>
@@ -536,19 +536,19 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     </message>
     <message>
         <location line="-401"/>
-        <source>fractalcoin Core</source>
-        <translation>fractalcoin Core</translation>
+        <source>Dogecoin Core</source>
+        <translation>Dogecoin Core</translation>
     </message>
     <message>
         <location line="+163"/>
-        <source>Request payments (generates QR codes and fractalcoin: URIs)</source>
-        <translation>Vraag betaling aan (genereert QR codes en "fractalcoin:" URIs)</translation>
+        <source>Request payments (generates QR codes and dogecoin: URIs)</source>
+        <translation>Vraag betaling aan (genereert QR codes en "dogecoin:" URIs)</translation>
     </message>
     <message>
         <location line="+29"/>
         <location line="+2"/>
-        <source>&amp;About fractalcoin Core</source>
-        <translation>&amp;Over fractalcoin Core</translation>
+        <source>&amp;About Dogecoin Core</source>
+        <translation>&amp;Over Dogecoin Core</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -562,8 +562,8 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     </message>
     <message>
         <location line="+3"/>
-        <source>Open a fractalcoin: URI or payment request</source>
-        <translation>Open een fractalcoin: URI of betalingsverzoek</translation>
+        <source>Open a dogecoin: URI or payment request</source>
+        <translation>Open een dogecoin: URI of betalingsverzoek</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -572,19 +572,19 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     </message>
     <message>
         <location line="+1"/>
-        <source>Show the fractalcoin Core help message to get a list with possible fractalcoin Core command-line options</source>
+        <source>Show the Dogecoin Core help message to get a list with possible Dogecoin Core command-line options</source>
         <translation>Toon het help-bericht voor een lijst met geldige commandoregel-opties</translation>
     </message>
     <message>
         <location line="+159"/>
         <location line="+5"/>
-        <source>fractalcoin client</source>
-        <translation>fractalcoin client</translation>
+        <source>Dogecoin client</source>
+        <translation>Dogecoin client</translation>
     </message>
     <message numerus="yes">
         <location line="+142"/>
-        <source>%n active connection(s) to fractalcoin network</source>
-        <translation><numerusform>%n actieve connectie naar het fractalcoin netwerk</numerusform><numerusform>%n actieve connecties naar het fractalcoin netwerk</numerusform></translation>
+        <source>%n active connection(s) to Dogecoin network</source>
+        <translation><numerusform>%n actieve connectie naar het Dogecoin netwerk</numerusform><numerusform>%n actieve connecties naar het Dogecoin netwerk</numerusform></translation>
     </message>
     <message>
         <location line="+22"/>
@@ -691,8 +691,8 @@ Adres: %4
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+438"/>
-        <source>A fatal error occurred. fractalcoin Core can no longer continue safely and will quit.</source>
-        <translation>Er is een fatale fout opgetreden. fractalcoin kan niet meer veilig doorgaan en zal nu afgesloten worden.</translation>
+        <source>A fatal error occurred. Dogecoin Core can no longer continue safely and will quit.</source>
+        <translation>Er is een fatale fout opgetreden. Dogecoin kan niet meer veilig doorgaan en zal nu afgesloten worden.</translation>
     </message>
 </context>
 <context>
@@ -1049,8 +1049,8 @@ Adres: %4
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid fractalcoin address.</source>
-        <translation>Het opgegeven adres &quot;%1&quot; is een ongeldig fractalcoin adres</translation>
+        <source>The entered address &quot;%1&quot; is not a valid Dogecoin address.</source>
+        <translation>Het opgegeven adres &quot;%1&quot; is een ongeldig Dogecoin adres</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1095,13 +1095,13 @@ Adres: %4
     <name>HelpMessageDialog</name>
     <message>
         <location filename="../forms/helpmessagedialog.ui" line="+19"/>
-        <source>fractalcoin Core - Command-line options</source>
-        <translation>fractalcoin Core - Commandoregel-opties</translation>
+        <source>Dogecoin Core - Command-line options</source>
+        <translation>Dogecoin Core - Commandoregel-opties</translation>
     </message>
     <message>
         <location filename="../utilitydialog.cpp" line="+38"/>
-        <source>fractalcoin Core</source>
-        <translation>fractalcoin Core</translation>
+        <source>Dogecoin Core</source>
+        <translation>Dogecoin Core</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -1153,18 +1153,18 @@ Adres: %4
     </message>
     <message>
         <location line="+9"/>
-        <source>Welcome to fractalcoin Core.</source>
-        <translation>Welkom bij fractalcoin Core</translation>
+        <source>Welcome to Dogecoin Core.</source>
+        <translation>Welkom bij Dogecoin Core</translation>
     </message>
     <message>
         <location line="+26"/>
-        <source>As this is the first time the program is launched, you can choose where fractalcoin Core will store its data.</source>
-        <translation>Omdat dit de eerste keer is dat het programma gestart is, kan je nu kiezen waar fractalcoin Core de data moet opslaan.</translation>
+        <source>As this is the first time the program is launched, you can choose where Dogecoin Core will store its data.</source>
+        <translation>Omdat dit de eerste keer is dat het programma gestart is, kan je nu kiezen waar Dogecoin Core de data moet opslaan.</translation>
     </message>
     <message>
         <location line="+10"/>
-        <source>fractalcoin Core will download and store a copy of the fractalcoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>fractalcoin Core zal een kopie van de fractalcoin blok keten downloaden en opslaan. Tenminste %1 GB aan data wordt opgeslagen in deze map en het zal groeien in de tijd. De portemonnee ook in deze map.</translation>
+        <source>Dogecoin Core will download and store a copy of the Dogecoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>Dogecoin Core zal een kopie van de Dogecoin blok keten downloaden en opslaan. Tenminste %1 GB aan data wordt opgeslagen in deze map en het zal groeien in de tijd. De portemonnee ook in deze map.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1178,8 +1178,8 @@ Adres: %4
     </message>
     <message>
         <location filename="../intro.cpp" line="+85"/>
-        <source>fractalcoin</source>
-        <translation>fractalcoin</translation>
+        <source>Dogecoin</source>
+        <translation>Dogecoin</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1264,13 +1264,13 @@ Adres: %4
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start fractalcoin after logging in to the system.</source>
-        <translation>Start fractalcoin automatisch na inloggen in het systeem</translation>
+        <source>Automatically start Dogecoin after logging in to the system.</source>
+        <translation>Start Dogecoin automatisch na inloggen in het systeem</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>&amp;Start fractalcoin on system login</source>
-        <translation>Start &amp;fractalcoin bij het inloggen in het systeem</translation>
+        <source>&amp;Start Dogecoin on system login</source>
+        <translation>Start &amp;Dogecoin bij het inloggen in het systeem</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -1299,8 +1299,8 @@ Adres: %4
     </message>
     <message>
         <location line="+58"/>
-        <source>Connect to the fractalcoin network through a SOCKS proxy.</source>
-        <translation>Verbind met het fractalcoin netwerk via een SOCKS proxy.</translation>
+        <source>Connect to the Dogecoin network through a SOCKS proxy.</source>
+        <translation>Verbind met het Dogecoin netwerk via een SOCKS proxy.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1334,8 +1334,8 @@ Adres: %4
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the fractalcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Open de fractalcoin-poort automatisch op de router. Dit werkt alleen als de router UPnP ondersteunt en deze optie aan staat.</translation>
+        <source>Automatically open the Dogecoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Open de Dogecoin-poort automatisch op de router. Dit werkt alleen als de router UPnP ondersteunt en deze optie aan staat.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1404,8 +1404,8 @@ Adres: %4
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting fractalcoin Core.</source>
-        <translation>De taal van de gebruikersinterface kan hier ingesteld worden. Deze instelling zal pas van kracht worden nadat fractalcoin herstart wordt.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Dogecoin Core.</source>
+        <translation>De taal van de gebruikersinterface kan hier ingesteld worden. Deze instelling zal pas van kracht worden nadat Dogecoin herstart wordt.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1419,8 +1419,8 @@ Adres: %4
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show fractalcoin addresses in the transaction list or not.</source>
-        <translation>Of fractalcoinadressen getoond worden in de transactielijst</translation>
+        <source>Whether to show Dogecoin addresses in the transaction list or not.</source>
+        <translation>Of Dogecoinadressen getoond worden in de transactielijst</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1494,8 +1494,8 @@ Adres: %4
     <message>
         <location line="+50"/>
         <location line="+231"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the fractalcoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>De weergegeven informatie kan verouderd zijn. Uw portemonnee synchroniseert automatisch met het fractalcoin netwerk nadat een verbinding is gemaakt, maar dit proces is nog niet voltooid.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Dogecoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>De weergegeven informatie kan verouderd zijn. Uw portemonnee synchroniseert automatisch met het Dogecoin netwerk nadat een verbinding is gemaakt, maar dit proces is nog niet voltooid.</translation>
     </message>
     <message>
         <location line="-155"/>
@@ -1574,8 +1574,8 @@ Adres: %4
     </message>
     <message>
         <location line="+1"/>
-        <source>URI can not be parsed! This can be caused by an invalid fractalcoin address or malformed URI parameters.</source>
-        <translation>URI kan niet worden geïnterpreteerd. Dit kan komen door een ongeldig fractalcoinadres of misvormde URI-parameters.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid Dogecoin address or malformed URI parameters.</source>
+        <translation>URI kan niet worden geïnterpreteerd. Dit kan komen door een ongeldig Dogecoinadres of misvormde URI-parameters.</translation>
     </message>
     <message>
         <location line="+96"/>
@@ -1594,8 +1594,8 @@ Adres: %4
     </message>
     <message>
         <location line="-353"/>
-        <source>Cannot start fractalcoin: click-to-pay handler</source>
-        <translation>Kan fractalcoin niet starten: click-to-pay handler</translation>
+        <source>Cannot start dogecoin: click-to-pay handler</source>
+        <translation>Kan dogecoin niet starten: click-to-pay handler</translation>
     </message>
     <message>
         <location line="+58"/>
@@ -1663,8 +1663,8 @@ Adres: %4
     <message>
         <location filename="../bitcoin.cpp" line="+71"/>
         <location line="+11"/>
-        <source>fractalcoin</source>
-        <translation>fractalcoin</translation>
+        <source>Dogecoin</source>
+        <translation>Dogecoin</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1678,8 +1678,8 @@ Adres: %4
     </message>
     <message>
         <location filename="../guiutil.cpp" line="+82"/>
-        <source>Enter a fractalcoin address (e.g. DJ7zB7c5BsB9UJLy1rKQtY7c6CQfGiaRLM)</source>
-        <translation>Vul een fractalcoinadres in (bijv. DJ7zB7c5BsB9UJLy1rKQtY7c6CQfGiaRLM)</translation>
+        <source>Enter a Dogecoin address (e.g. DJ7zB7c5BsB9UJLy1rKQtY7c6CQfGiaRLM)</source>
+        <translation>Vul een Dogecoinadres in (bijv. DJ7zB7c5BsB9UJLy1rKQtY7c6CQfGiaRLM)</translation>
     </message>
 </context>
 <context>
@@ -1839,8 +1839,8 @@ Adres: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the fractalcoin Core debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Open het fractalcoindebug-logbestand van de huidige datamap. Dit kan een aantal seconden duren voor grote logbestanden.</translation>
+        <source>Open the Dogecoin Core debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Open het Dogecoindebug-logbestand van de huidige datamap. Dit kan een aantal seconden duren voor grote logbestanden.</translation>
     </message>
     <message>
         <location line="+76"/>
@@ -1849,8 +1849,8 @@ Adres: %4
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-30"/>
-        <source>Welcome to the fractalcoin Core RPC console.</source>
-        <translation>Welkom bij de fractalcoin RPC-console.</translation>
+        <source>Welcome to the Dogecoin Core RPC console.</source>
+        <translation>Welkom bij de Dogecoin RPC-console.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1928,8 +1928,8 @@ Adres: %4
     <message>
         <location line="+14"/>
         <location line="+23"/>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the fractalcoin network.</source>
-        <translation>Een optioneel bericht om aan het betalingsverzoek toe te voegen, dat weergegeven zal worden bij het openen van het verzoek. Het bericht zal niet bij de betaling over het fractalcoin netwerk verzonden worden</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Dogecoin network.</source>
+        <translation>Een optioneel bericht om aan het betalingsverzoek toe te voegen, dat weergegeven zal worden bij het openen van het verzoek. Het bericht zal niet bij de betaling over het Dogecoin netwerk verzonden worden</translation>
     </message>
     <message>
         <location line="-7"/>
@@ -2324,8 +2324,8 @@ Adres: %4
     </message>
     <message>
         <location line="+113"/>
-        <source>Warning: Invalid fractalcoin address</source>
-        <translation>Waarschuwing: Ongeldig fractalcoin adres</translation>
+        <source>Warning: Invalid Dogecoin address</source>
+        <translation>Waarschuwing: Ongeldig Dogecoin adres</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -2436,8 +2436,8 @@ Adres: %4
     </message>
     <message>
         <location line="+33"/>
-        <source>A message that was attached to the fractalcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the fractalcoin network.</source>
-        <translation>Het aan het betalingsverzoek bijgevoegde bericht zal bij de transactie worden opgeslagen. Let op: dit bericht zal niet over het fractalcoin netwerk verzonden worden.</translation>
+        <source>A message that was attached to the dogecoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Dogecoin network.</source>
+        <translation>Het aan het betalingsverzoek bijgevoegde bericht zal bij de transactie worden opgeslagen. Let op: dit bericht zal niet over het Dogecoin netwerk verzonden worden.</translation>
     </message>
     <message>
         <location line="+426"/>
@@ -2461,8 +2461,8 @@ Adres: %4
     <name>ShutdownWindow</name>
     <message>
         <location filename="../utilitydialog.cpp" line="+48"/>
-        <source>fractalcoin Core is shutting down...</source>
-        <translation>fractalcoin Core is aan het afsluiten...</translation>
+        <source>Dogecoin Core is shutting down...</source>
+        <translation>Dogecoin Core is aan het afsluiten...</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2531,8 +2531,8 @@ Adres: %4
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this fractalcoin address</source>
-        <translation>Onderteken een bericht om te bewijzen dat u een bepaald fractalcoinadres bezit</translation>
+        <source>Sign the message to prove you own this Dogecoin address</source>
+        <translation>Onderteken een bericht om te bewijzen dat u een bepaald Dogecoinadres bezit</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2567,8 +2567,8 @@ Adres: %4
     </message>
     <message>
         <location line="+37"/>
-        <source>Verify the message to ensure it was signed with the specified fractalcoin address</source>
-        <translation>Controleer een bericht om te verifiëren dat het gespecificeerde fractalcoinadres het bericht heeft ondertekend.</translation>
+        <source>Verify the message to ensure it was signed with the specified Dogecoin address</source>
+        <translation>Controleer een bericht om te verifiëren dat het gespecificeerde Dogecoinadres het bericht heeft ondertekend.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2582,8 +2582,8 @@ Adres: %4
     </message>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+30"/>
-        <source>Enter a fractalcoin address (e.g. DJ7zB7c5BsB9UJLy1rKQtY7c6CQfGiaRLM)</source>
-        <translation>Vul een fractalcoinadres in (bijv. DJ7zB7c5BsB9UJLy1rKQtY7c6CQfGiaRLM)</translation>
+        <source>Enter a Dogecoin address (e.g. DJ7zB7c5BsB9UJLy1rKQtY7c6CQfGiaRLM)</source>
+        <translation>Vul een Dogecoinadres in (bijv. DJ7zB7c5BsB9UJLy1rKQtY7c6CQfGiaRLM)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2661,13 +2661,13 @@ Adres: %4
     <name>SplashScreen</name>
     <message>
         <location filename="../splashscreen.cpp" line="+28"/>
-        <source>fractalcoin Core</source>
-        <translation>fractalcoin Core</translation>
+        <source>Dogecoin Core</source>
+        <translation>Dogecoin Core</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>The fractalcoin Core developers</source>
-        <translation>De fractalcoin Core ontwikkelaars</translation>
+        <source>The Dogecoin Core developers</source>
+        <translation>De Dogecoin Core ontwikkelaars</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3234,7 +3234,7 @@ Adres: %4
     </message>
 </context>
 <context>
-    <name>fractalcoin-core</name>
+    <name>dogecoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+221"/>
         <source>Usage:</source>
@@ -3257,14 +3257,14 @@ Adres: %4
     </message>
     <message>
         <location line="+22"/>
-        <source>Specify configuration file (default: fractalcoin.conf)</source>
-        <translation>Specificeer configuratiebestand (standaard: fractalcoin.conf)
+        <source>Specify configuration file (default: dogecoin.conf)</source>
+        <translation>Specificeer configuratiebestand (standaard: dogecoin.conf)
 </translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: fractalcoind.pid)</source>
-        <translation>Specificeer pid-bestand (standaard: fractalcoind.pid)
+        <source>Specify pid file (default: dogecoind.pid)</source>
+        <translation>Specificeer pid-bestand (standaard: dogecoind.pid)
 </translation>
     </message>
     <message>
@@ -3342,23 +3342,23 @@ Adres: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=fractalcoinrpc
+rpcuser=dogecoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;fractalcoin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;Dogecoin Alert&quot; admin@foo.com
 </source>
         <translation>%s, u moet een RPC-wachtwoord instellen in het configuratiebestand: %s
 U wordt aangeraden het volgende willekeurige wachtwoord te gebruiken:
-rpcuser=fractalcoinrpc
+rpcuser=dogecoinrpc
 rpcpassword=%s
 (u hoeft dit wachtwoord niet te onthouden)
 De gebruikersnaam en wachtwoord mogen niet hetzelfde zijn.
 Als het bestand niet bestaat, make hem dan aan met leesrechten voor enkel de eigenaar.
 Het is ook aan te bevelen &quot;alertnotify&quot; in te stellen zodat u op de hoogte gesteld wordt van problemen;
-for example: alertnotify=echo %%s | mail -s &quot;fractalcoin Alert&quot; admin@foo.com</translation>
+for example: alertnotify=echo %%s | mail -s &quot;Dogecoin Alert&quot; admin@foo.com</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -3377,8 +3377,8 @@ for example: alertnotify=echo %%s | mail -s &quot;fractalcoin Alert&quot; admin@
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. fractalcoin Core is probably already running.</source>
-        <translation>Kan geen lock op de datamap %s verkrijgen. fractalcoin draait vermoedelijk reeds.</translation>
+        <source>Cannot obtain a lock on data directory %s. Dogecoin Core is probably already running.</source>
+        <translation>Kan geen lock op de datamap %s verkrijgen. Dogecoin draait vermoedelijk reeds.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3422,8 +3422,8 @@ for example: alertnotify=echo %%s | mail -s &quot;fractalcoin Alert&quot; admin@
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong fractalcoin Core will not work properly.</source>
-        <translation>Waarschuwing: Controleer dat de datum en tijd op uw computer correct zijn ingesteld. Als uw klok fout staat zal fractalcoin niet correct werken.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Dogecoin Core will not work properly.</source>
+        <translation>Waarschuwing: Controleer dat de datum en tijd op uw computer correct zijn ingesteld. Als uw klok fout staat zal Dogecoin niet correct werken.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3457,13 +3457,13 @@ for example: alertnotify=echo %%s | mail -s &quot;fractalcoin Alert&quot; admin@
     </message>
     <message>
         <location line="+1"/>
-        <source>fractalcoin Core Daemon</source>
-        <translation>fractalcoin Core Daemon</translation>
+        <source>Dogecoin Core Daemon</source>
+        <translation>Dogecoin Core Daemon</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>fractalcoin Core RPC client version</source>
-        <translation>fractalcoin RPC desktop versie</translation>
+        <source>Dogecoin Core RPC client version</source>
+        <translation>Dogecoin RPC desktop versie</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3662,8 +3662,8 @@ for example: alertnotify=echo %%s | mail -s &quot;fractalcoin Alert&quot; admin@
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to fractalcoin Core server</source>
-        <translation>Stuur commando naar fractalcoin server</translation>
+        <source>Send command to Dogecoin Core server</source>
+        <translation>Stuur commando naar Dogecoin server</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -3682,8 +3682,8 @@ for example: alertnotify=echo %%s | mail -s &quot;fractalcoin Alert&quot; admin@
     </message>
     <message>
         <location line="+2"/>
-        <source>Start fractalcoin Core server</source>
-        <translation>Start fractalcoin Core server</translation>
+        <source>Start Dogecoin Core server</source>
+        <translation>Start Dogecoin Core server</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3692,8 +3692,8 @@ for example: alertnotify=echo %%s | mail -s &quot;fractalcoin Alert&quot; admin@
     </message>
     <message>
         <location line="+10"/>
-        <source>Usage (deprecated, use fractalcoin-cli):</source>
-        <translation>Gebruik (vervallen; gebruik fractalcoin-cli);</translation>
+        <source>Usage (deprecated, use dogecoin-cli):</source>
+        <translation>Gebruik (vervallen; gebruik Dogecoin-cli);</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -3957,13 +3957,13 @@ for example: alertnotify=echo %%s | mail -s &quot;fractalcoin Alert&quot; admin@
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of fractalcoin Core</source>
-        <translation>Fout bij laden wallet.dat: Portemonnee vereist een nieuwere versie van fractalcoin</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Dogecoin Core</source>
+        <translation>Fout bij laden wallet.dat: Portemonnee vereist een nieuwere versie van Dogecoin</translation>
     </message>
     <message>
         <location line="+98"/>
-        <source>Wallet needed to be rewritten: restart fractalcoin Core to complete</source>
-        <translation>Portemonnee moest herschreven worden: Herstart fractalcoin om te voltooien</translation>
+        <source>Wallet needed to be rewritten: restart Dogecoin Core to complete</source>
+        <translation>Portemonnee moest herschreven worden: Herstart Dogecoin om te voltooien</translation>
     </message>
     <message>
         <location line="-100"/>
@@ -4022,8 +4022,8 @@ for example: alertnotify=echo %%s | mail -s &quot;fractalcoin Alert&quot; admin@
     </message>
     <message>
         <location line="-32"/>
-        <source>Unable to bind to %s on this computer. fractalcoin Core is probably already running.</source>
-        <translation>Niet in staat om aan %s te binden op deze computer. fractalcoin draait vermoedelijk reeds.</translation>
+        <source>Unable to bind to %s on this computer. Dogecoin Core is probably already running.</source>
+        <translation>Niet in staat om aan %s te binden op deze computer. Dogecoin draait vermoedelijk reeds.</translation>
     </message>
     <message>
         <location line="+95"/>

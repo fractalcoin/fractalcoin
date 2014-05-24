@@ -15,11 +15,11 @@ endif
 bin_PROGRAMS =
 
 if BUILD_BITCOIND
-  bin_PROGRAMS += fractalcoind
+  bin_PROGRAMS += dogecoind
 endif
 
 if BUILD_BITCOIN_CLI
-  bin_PROGRAMS += fractalcoin-cli
+  bin_PROGRAMS += dogecoin-cli
 endif
 
 SUBDIRS = . $(BUILD_QT)
@@ -164,36 +164,36 @@ libbitcoin_cli_a_SOURCES = \
 nodist_libbitcoin_common_a_SOURCES = $(top_srcdir)/src/obj/build.h
 #
 
-# fractalcoind binary #
-fractalcoind_LDADD = \
+# dogecoind binary #
+dogecoind_LDADD = \
   libbitcoin_server.a \
   libbitcoin_cli.a \
   libbitcoin_common.a \
   $(LIBLEVELDB) \
   $(LIBMEMENV)
 if ENABLE_WALLET
-fractalcoind_LDADD += libbitcoin_wallet.a libbitcoin_server_wallet.a
+dogecoind_LDADD += libbitcoin_wallet.a libbitcoin_server_wallet.a
 endif
-fractalcoind_SOURCES = fractalcoind.cpp
+dogecoind_SOURCES = dogecoind.cpp
 #
 
 if TARGET_WINDOWS
-fractalcoind_SOURCES += fractalcoind-res.rc
+dogecoind_SOURCES += dogecoind-res.rc
 endif
 
 AM_CPPFLAGS += $(BDB_CPPFLAGS)
-fractalcoind_LDADD += $(BOOST_LIBS) $(BDB_LIBS)
+dogecoind_LDADD += $(BOOST_LIBS) $(BDB_LIBS)
 
-# fractalcoin-cli binary #
-fractalcoin_cli_LDADD = \
+# dogecoin-cli binary #
+dogecoin_cli_LDADD = \
   libbitcoin_cli.a \
   libbitcoin_common.a \
   $(BOOST_LIBS)
-fractalcoin_cli_SOURCES = fractalcoin-cli.cpp
+dogecoin_cli_SOURCES = dogecoin-cli.cpp
 #
 
 if TARGET_WINDOWS
-fractalcoin_cli_SOURCES += fractalcoin-cli-res.rc
+dogecoin_cli_SOURCES += dogecoin-cli-res.rc
 endif
 
 # NOTE: This dependency is not strictly necessary, but without it make may try to build both in parallel, which breaks the LevelDB build system in a race
