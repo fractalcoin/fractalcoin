@@ -1,50 +1,50 @@
-Dogecoin 1.7
+Fractalcoin 1.7
 =====================
 
 * Copyright (c) 2009-2014 Bitcoin Developers
 * Copyright (c) 2011-2013 Litecoin Developers
-* Copyright (c) 2013-2014 Dogecoin Developers
+* Copyright (c) 2013-2014 Fractalcoin Developers
 
 
 Setup
 ---------------------
-[Dogecoin Core](http://dogecoin.com/en/download) is the original Dogecoin client and it builds the backbone of the network. However, it downloads and stores the entire history of Dogecoin transactions (which is currently several GBs); depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
+[Fractalcoin Core](http://fractalcoin.com/en/download) is the original Fractalcoin client and it builds the backbone of the network. However, it downloads and stores the entire history of Fractalcoin transactions (which is currently several GBs); depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
 
 Running
 ---------------------
-The following are some helpful notes on how to run Dogecoin on your native platform. 
+The following are some helpful notes on how to run Fractalcoin on your native platform. 
 
 ### Unix
 
-You need the Qt4 run-time libraries to run Dogecoin-Qt. On Debian or Ubuntu:
+You need the Qt4 run-time libraries to run Fractalcoin-Qt. On Debian or Ubuntu:
 
 	sudo apt-get install libqtgui4
 
 Unpack the files into a directory and run:
 
-- bin/32/dogecoin-qt (GUI, 32-bit) or bin/32/dogecoind (headless, 32-bit)
-- bin/64/dogecoin-qt (GUI, 64-bit) or bin/64/dogecoind (headless, 64-bit)
+- bin/32/fractalcoin-qt (GUI, 32-bit) or bin/32/fractalcoind (headless, 32-bit)
+- bin/64/fractalcoin-qt (GUI, 64-bit) or bin/64/fractalcoind (headless, 64-bit)
 
 
 
 ### Windows
 
-Unpack the files into a directory, and then run dogecoin-qt.exe.
+Unpack the files into a directory, and then run fractalcoin-qt.exe.
 
 ### OSX
 
-Drag Dogecoin-Qt to your applications folder, and then run Dogecoin-Qt.
+Drag Fractalcoin-Qt to your applications folder, and then run Fractalcoin-Qt.
 
 ### Need Help?
 
-* See the documentation at the [Dogecoin Wiki](http://dogeco.in/)
+* See the documentation at the [Fractalcoin Wiki](http://fractalco.in/)
 for help and more information.
-* Ask for help on [#dogecoin](http://webchat.freenode.net?channels=dogecoin) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net?channels=dogecoin).
-* Ask for help on the [/r/dogeducation subreddit](http://reddit.com/r/dogeducation).
+* Ask for help on [#fractalcoin](http://webchat.freenode.net?channels=fractalcoin) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net?channels=fractalcoin).
+* Ask for help on the [/r/fractalducation subreddit](http://reddit.com/r/fractalducation).
 
 Building
 ---------------------
-The following are developer notes on how to build Dogecoin on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
+The following are developer notes on how to build Fractalcoin on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 
 - [OSX Build Notes](build-osx.md)
 - [Unix Build Notes](build-unix.md)
@@ -52,7 +52,7 @@ The following are developer notes on how to build Dogecoin on your native platfo
 
 Development
 ---------------------
-The Dogecoin repo's [root README](https://github.com/dogecoin/dogecoin/blob/master/README.md) contains relevant information on the development process and automated testing.
+The Fractalcoin repo's [root README](https://github.com/fractalcoin/fractalcoin/blob/master/README.md) contains relevant information on the development process and automated testing.
 
 - [Coding Guidelines](coding.md)
 - [Multiwallet Qt Development](multiwallet-qt.md)
@@ -63,8 +63,8 @@ The Dogecoin repo's [root README](https://github.com/dogecoin/dogecoin/blob/mast
 - [Unit Tests](unit-tests.md)
 
 ### Resources
-* Discuss on the [/r/dogecoindev](http://www.reddit.com/r/dogecoindev) subreddit.
-* Discuss on [#dogecoin-dev](http://webchat.freenode.net/?channels=dogecoin-dev) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net/?channels=dogecoin-dev).
+* Discuss on the [/r/fractalcoindev](http://www.reddit.com/r/fractalcoindev) subreddit.
+* Discuss on [#fractalcoin-dev](http://webchat.freenode.net/?channels=fractalcoin-dev) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net/?channels=fractalcoin-dev).
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)

@@ -3,13 +3,13 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About Dogecoin Core</source>
-        <translation>Dogecoin Core-ს შესახებ</translation>
+        <source>About Fractalcoin Core</source>
+        <translation>Fractalcoin Core-ს შესახებ</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;Dogecoin Core&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;Dogecoin Core&lt;/b&gt;-ს ვერსია</translation>
+        <source>&lt;b&gt;Fractalcoin Core&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;Fractalcoin Core&lt;/b&gt;-ს ვერსია</translation>
     </message>
     <message>
         <location line="+57"/>
@@ -33,8 +33,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+0"/>
-        <source>The Dogecoin Core developers</source>
-        <translation>Dogecoin Core-ს ავტორები</translation>
+        <source>The Fractalcoin Core developers</source>
+        <translation>Fractalcoin Core-ს ავტორები</translation>
     </message>
 </context>
 <context>
@@ -121,13 +121,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+7"/>
-        <source>These are your Dogecoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>ეს არის თქვენი Dogecoin-მისამართები გადახდების შესასრულებლად. მონეტების გაგზავნამდე ყოველთვის შეამოწმეთ თანხა და მიმღების მისამართი.</translation>
+        <source>These are your Fractalcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>ეს არის თქვენი Fractalcoin-მისამართები გადახდების შესასრულებლად. მონეტების გაგზავნამდე ყოველთვის შეამოწმეთ თანხა და მიმღების მისამართი.</translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>These are your Dogecoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>ეს არის თქვენი Dogecoin-მისამართები გადახდების მისაღებად. რეკომენდებულია ყოველი ტრანსაქციისათვის ახალი მიღების მისამართის გამოყენება.</translation>
+        <source>These are your Fractalcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>ეს არის თქვენი Fractalcoin-მისამართები გადახდების მისაღებად. რეკომენდებულია ყოველი ტრანსაქციისათვის ახალი მიღების მისამართის გამოყენება.</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -247,7 +247,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR DOGECOINS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR FRACCOINS&lt;/b&gt;!</source>
         <translation>ყურადღება: საფულის დაშიფრვის შემდეგ თუ თქვენ დაკარგავთ ფრაზა-პაროლს,  &lt;b&gt;ყველა ბიტქოინი დაგეკარგებათ&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -274,8 +274,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-56"/>
-        <source>Dogecoin Core will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your Dogecoins from being stolen by malware infecting your computer.</source>
-        <translation>ახლა Dogecoin დაიხურება დაშიფრვის პროცესის დასასრულებლად. გაითვალისწინეთ, რომ დაშიფრვა სრულად ვერ დაიცავს თქვენს ბითქოინებს თქვენს კომპიუტერში შემოპარული მავნე პროგრამების საშუალებით დატაცებისაგან.</translation>
+        <source>Fractalcoin Core will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your Fractalcoins from being stolen by malware infecting your computer.</source>
+        <translation>ახლა Fractalcoin დაიხურება დაშიფრვის პროცესის დასასრულებლად. გაითვალისწინეთ, რომ დაშიფრვა სრულად ვერ დაიცავს თქვენს ბითქოინებს თქვენს კომპიუტერში შემოპარული მავნე პროგრამების საშუალებით დატაცებისაგან.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -368,8 +368,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+7"/>
-        <source>Show information about Dogecoin Core</source>
-        <translation>ინფორმაცია Dogecoin-ის შესახებ</translation>
+        <source>Show information about Fractalcoin Core</source>
+        <translation>ინფორმაცია Fractalcoin-ის შესახებ</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -429,13 +429,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-405"/>
-        <source>Send coins to a Dogecoin address</source>
-        <translation>მონეტების გაგზავნა Dogecoin-მისამართზე</translation>
+        <source>Send coins to a Fractalcoin address</source>
+        <translation>მონეტების გაგზავნა Fractalcoin-მისამართზე</translation>
     </message>
     <message>
         <location line="+49"/>
-        <source>Modify configuration options for Dogecoin Core</source>
-        <translation>Dogecoin-ის საკონფიგურაციო პარამეტრების ცვლილება</translation>
+        <source>Modify configuration options for Fractalcoin Core</source>
+        <translation>Fractalcoin-ის საკონფიგურაციო პარამეტრების ცვლილება</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -464,8 +464,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+430"/>
-        <source>Dogecoin</source>
-        <translation>Dogecoin</translation>
+        <source>Fractalcoin</source>
+        <translation>Fractalcoin</translation>
     </message>
     <message>
         <location line="-643"/>
@@ -500,13 +500,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign messages with your Dogecoin addresses to prove you own them</source>
-        <translation>მესიჯებზე ხელმოწერა თქვენი Dogecoin-მისამართებით იმის დასტურად, რომ ის თქვენია</translation>
+        <source>Sign messages with your Fractalcoin addresses to prove you own them</source>
+        <translation>მესიჯებზე ხელმოწერა თქვენი Fractalcoin-მისამართებით იმის დასტურად, რომ ის თქვენია</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified Dogecoin addresses</source>
-        <translation>შეამოწმეთ, რომ მესიჯები ხელმოწერილია მითითებული Dogecoin-მისამართით</translation>
+        <source>Verify messages to ensure they were signed with specified Fractalcoin addresses</source>
+        <translation>შეამოწმეთ, რომ მესიჯები ხელმოწერილია მითითებული Fractalcoin-მისამართით</translation>
     </message>
     <message>
         <location line="+48"/>
@@ -536,19 +536,19 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-401"/>
-        <source>Dogecoin Core</source>
-        <translation>Dogecoin Core</translation>
+        <source>Fractalcoin Core</source>
+        <translation>Fractalcoin Core</translation>
     </message>
     <message>
         <location line="+163"/>
-        <source>Request payments (generates QR codes and dogecoin: URIs)</source>
-        <translation>გადახდის მოთხოვნა (შეიქმნება QR-კოდები და dogecoin: ბმულები)</translation>
+        <source>Request payments (generates QR codes and fractalcoin: URIs)</source>
+        <translation>გადახდის მოთხოვნა (შეიქმნება QR-კოდები და fractalcoin: ბმულები)</translation>
     </message>
     <message>
         <location line="+29"/>
         <location line="+2"/>
-        <source>&amp;About Dogecoin Core</source>
-        <translation>Dogecoin Core-ს შეს&amp;ახებ</translation>
+        <source>&amp;About Fractalcoin Core</source>
+        <translation>Fractalcoin Core-ს შეს&amp;ახებ</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -562,8 +562,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+3"/>
-        <source>Open a dogecoin: URI or payment request</source>
-        <translation>dogecoin: URI-ის ან გადახდის მოთხოვნის გახსნა</translation>
+        <source>Open a fractalcoin: URI or payment request</source>
+        <translation>fractalcoin: URI-ის ან გადახდის მოთხოვნის გახსნა</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -572,18 +572,18 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>Show the Dogecoin Core help message to get a list with possible Dogecoin Core command-line options</source>
-        <translation>Dogecoin Core-ს დახმარების ჩვენება Dogecoin-ის საკომანდო სტრიქონის დასაშვები ოპციების სანახავად</translation>
+        <source>Show the Fractalcoin Core help message to get a list with possible Fractalcoin Core command-line options</source>
+        <translation>Fractalcoin Core-ს დახმარების ჩვენება Fractalcoin-ის საკომანდო სტრიქონის დასაშვები ოპციების სანახავად</translation>
     </message>
     <message>
         <location line="+159"/>
         <location line="+5"/>
-        <source>Dogecoin client</source>
-        <translation>Dogecoin-კლიენტი</translation>
+        <source>Fractalcoin client</source>
+        <translation>Fractalcoin-კლიენტი</translation>
     </message>
     <message numerus="yes">
         <location line="+142"/>
-        <source>%n active connection(s) to Dogecoin network</source>
+        <source>%n active connection(s) to Fractalcoin network</source>
         <translation><numerusform>აქტიური მიერთებები ბითქოინის ქსელთან: %n</numerusform></translation>
     </message>
     <message>
@@ -691,8 +691,8 @@ Address: %4
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+438"/>
-        <source>A fatal error occurred. Dogecoin Core can no longer continue safely and will quit.</source>
-        <translation>ფატალური შეცდომა. Dogecoin ვერ უზრუნველყოფს უსაფრთხო გაგრძელებას, ამიტომ იხურება.</translation>
+        <source>A fatal error occurred. Fractalcoin Core can no longer continue safely and will quit.</source>
+        <translation>ფატალური შეცდომა. Fractalcoin ვერ უზრუნველყოფს უსაფრთხო გაგრძელებას, ამიტომ იხურება.</translation>
     </message>
 </context>
 <context>
@@ -1049,8 +1049,8 @@ Address: %4
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid Dogecoin address.</source>
-        <translation>შეყვანილი მისამართი &quot;%1&quot; არ არის ვალიდური Dogecoin-მისამართი.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid Fractalcoin address.</source>
+        <translation>შეყვანილი მისამართი &quot;%1&quot; არ არის ვალიდური Fractalcoin-მისამართი.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1095,13 +1095,13 @@ Address: %4
     <name>HelpMessageDialog</name>
     <message>
         <location filename="../forms/helpmessagedialog.ui" line="+19"/>
-        <source>Dogecoin Core - Command-line options</source>
-        <translation>Dogecoin Core - საკომანდო სტრიქონის ოპციები</translation>
+        <source>Fractalcoin Core - Command-line options</source>
+        <translation>Fractalcoin Core - საკომანდო სტრიქონის ოპციები</translation>
     </message>
     <message>
         <location filename="../utilitydialog.cpp" line="+38"/>
-        <source>Dogecoin Core</source>
-        <translation>Dogecoin Core</translation>
+        <source>Fractalcoin Core</source>
+        <translation>Fractalcoin Core</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -1153,18 +1153,18 @@ Address: %4
     </message>
     <message>
         <location line="+9"/>
-        <source>Welcome to Dogecoin Core.</source>
-        <translation>მოგესალმებათ Dogecoin Core.</translation>
+        <source>Welcome to Fractalcoin Core.</source>
+        <translation>მოგესალმებათ Fractalcoin Core.</translation>
     </message>
     <message>
         <location line="+26"/>
-        <source>As this is the first time the program is launched, you can choose where Dogecoin Core will store its data.</source>
-        <translation>ეს პროგრამის პირველი გაშვებაა; შეგიძლიათ მიუთითოთ, სად შეინახოს მონაცემები Dogecoin Core-მ.</translation>
+        <source>As this is the first time the program is launched, you can choose where Fractalcoin Core will store its data.</source>
+        <translation>ეს პროგრამის პირველი გაშვებაა; შეგიძლიათ მიუთითოთ, სად შეინახოს მონაცემები Fractalcoin Core-მ.</translation>
     </message>
     <message>
         <location line="+10"/>
-        <source>Dogecoin Core will download and store a copy of the Dogecoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>Dogecoin Core გადმოტვირთავს და შეინახავს Dogecoin-ის ბლოკთა ჯაჭვს. მითითებულ კატალოგში დაგროვდება სულ ცოტა 1 გბ მონაცემები, და მომავალში უფრო გაიზრდება. საფულეც ამავე კატალოგში შეინახება.</translation>
+        <source>Fractalcoin Core will download and store a copy of the Fractalcoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>Fractalcoin Core გადმოტვირთავს და შეინახავს Fractalcoin-ის ბლოკთა ჯაჭვს. მითითებულ კატალოგში დაგროვდება სულ ცოტა 1 გბ მონაცემები, და მომავალში უფრო გაიზრდება. საფულეც ამავე კატალოგში შეინახება.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1178,8 +1178,8 @@ Address: %4
     </message>
     <message>
         <location filename="../intro.cpp" line="+85"/>
-        <source>Dogecoin</source>
-        <translation>Dogecoin</translation>
+        <source>Fractalcoin</source>
+        <translation>Fractalcoin</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1254,12 +1254,12 @@ Address: %4
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start Dogecoin Core after logging in to the system.</source>
-        <translation>სისტემაში შესვლის შემდეგ Dogecoin-ის ავტომატური გაშვება.</translation>
+        <source>Automatically start Fractalcoin Core after logging in to the system.</source>
+        <translation>სისტემაში შესვლის შემდეგ Fractalcoin-ის ავტომატური გაშვება.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Dogecoin Core on system login</source>
+        <source>&amp;Start Fractalcoin Core on system login</source>
         <translation>&amp;სისტემაში შესვლისას გაშვება</translation>
     </message>
     <message>
@@ -1289,8 +1289,8 @@ Address: %4
     </message>
     <message>
         <location line="+58"/>
-        <source>Connect to the Dogecoin network through a SOCKS proxy.</source>
-        <translation>Dogecoin-ქსელზე მიერთება SOCKS-პროქსით.</translation>
+        <source>Connect to the Fractalcoin network through a SOCKS proxy.</source>
+        <translation>Fractalcoin-ქსელზე მიერთება SOCKS-პროქსით.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1324,8 +1324,8 @@ Address: %4
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the Dogecoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>როუტერში Dogecoin-კლიენტის პორტის ავტომატური გახსნა. მუშაობს, თუ თქვენს როუტერს ჩართული აქვს UPnP.</translation>
+        <source>Automatically open the Fractalcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>როუტერში Fractalcoin-კლიენტის პორტის ავტომატური გახსნა. მუშაობს, თუ თქვენს როუტერს ჩართული აქვს UPnP.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1394,8 +1394,8 @@ Address: %4
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Dogecoin Core.</source>
-        <translation>აქ შეგიძლიათ აირჩიოთ სამომხმარებლო ენა. ძალაში შევა Dogecoin-ის რესტარტის შემდეგ.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Fractalcoin Core.</source>
+        <translation>აქ შეგიძლიათ აირჩიოთ სამომხმარებლო ენა. ძალაში შევა Fractalcoin-ის რესტარტის შემდეგ.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1409,8 +1409,8 @@ Address: %4
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show Dogecoin addresses in the transaction list or not.</source>
-        <translation>ტრანსაქციების სიაში იყოს თუ არა ნაჩვენები Dogecoin-მისამართები.</translation>
+        <source>Whether to show Fractalcoin addresses in the transaction list or not.</source>
+        <translation>ტრანსაქციების სიაში იყოს თუ არა ნაჩვენები Fractalcoin-მისამართები.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1484,8 +1484,8 @@ Address: %4
     <message>
         <location line="+50"/>
         <location line="+231"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Dogecoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>ნაჩვენები ინფორმაცია შეიძლება მოძველებული იყოს. თქვენი საფულე ავტომატურად სინქრონიზდება Dogecoin-ის ქსელთან კავშირის დამყარების შემდეგ, ეს პროცესი ჯერ არ არის დასრულებული.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Fractalcoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>ნაჩვენები ინფორმაცია შეიძლება მოძველებული იყოს. თქვენი საფულე ავტომატურად სინქრონიზდება Fractalcoin-ის ქსელთან კავშირის დამყარების შემდეგ, ეს პროცესი ჯერ არ არის დასრულებული.</translation>
     </message>
     <message>
         <location line="-155"/>
@@ -1554,8 +1554,8 @@ Address: %4
     </message>
     <message>
         <location line="+1"/>
-        <source>URI can not be parsed! This can be caused by an invalid Dogecoin address or malformed URI parameters.</source>
-        <translation>URI-ის დამუშავება ვერ მოხერხდა. შესაძლოა არასწორია Dogecoin-მისამართი ან  URI-ის პარამეტრები.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid Fractalcoin address or malformed URI parameters.</source>
+        <translation>URI-ის დამუშავება ვერ მოხერხდა. შესაძლოა არასწორია Fractalcoin-მისამართი ან  URI-ის პარამეტრები.</translation>
     </message>
     <message>
         <location line="+96"/>
@@ -1574,8 +1574,8 @@ Address: %4
     </message>
     <message>
         <location line="-353"/>
-        <source>Cannot start dogecoin: click-to-pay handler</source>
-        <translation>ვერ გაიშვა dogecoin: click-to-pay</translation>
+        <source>Cannot start fractalcoin: click-to-pay handler</source>
+        <translation>ვერ გაიშვა fractalcoin: click-to-pay</translation>
     </message>
     <message>
         <location line="+58"/>
@@ -1643,8 +1643,8 @@ Address: %4
     <message>
         <location filename="../bitcoin.cpp" line="+71"/>
         <location line="+11"/>
-        <source>Dogecoin</source>
-        <translation>Dogecoin</translation>
+        <source>Fractalcoin</source>
+        <translation>Fractalcoin</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1658,7 +1658,7 @@ Address: %4
     </message>
     <message>
         <location filename="../guiutil.cpp" line="+82"/>
-        <source>Enter a Dogecoin address (e.g. DJ7zB7c5BsB9UJLy1rKQtY7c6CQfGiaRLM)</source>
+        <source>Enter a Fractalcoin address (e.g. DJ7zB7c5BsB9UJLy1rKQtY7c6CQfGiaRLM)</source>
         <translation>შეიყვანეთ ბიტკოინ-მისამართი (მაგ. DJ7zB7c5BsB9UJLy1rKQtY7c6CQfGiaRLM)</translation>
     </message>
 </context>
@@ -1819,8 +1819,8 @@ Address: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the Dogecoin Core debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>გახსენით Dogecoin-ის დახვეწის ლოგ-ფაილი მიმდინარე კატალოგიდან. დიდი ლოგ-ფაილის შემთხვევაში ამას შეიძლება რამდენიმე წამი მოუნდეს.</translation>
+        <source>Open the Fractalcoin Core debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>გახსენით Fractalcoin-ის დახვეწის ლოგ-ფაილი მიმდინარე კატალოგიდან. დიდი ლოგ-ფაილის შემთხვევაში ამას შეიძლება რამდენიმე წამი მოუნდეს.</translation>
     </message>
     <message>
         <location line="+76"/>
@@ -1829,8 +1829,8 @@ Address: %4
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-30"/>
-        <source>Welcome to the Dogecoin Core RPC console.</source>
-        <translation>მოგესალმებათ Dogecoin-ის RPC კონსოლი.</translation>
+        <source>Welcome to the Fractalcoin Core RPC console.</source>
+        <translation>მოგესალმებათ Fractalcoin-ის RPC კონსოლი.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1908,7 +1908,7 @@ Address: %4
     <message>
         <location line="+14"/>
         <location line="+23"/>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Dogecoin network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Fractalcoin network.</source>
         <translation>არააუცილებელი მესიჯი, რომელიც ერთვის გადახდის მოთხოვნას და ნაჩვენები იქნება მოთხოვნის გახსნისას. შენიშვნა: მესიჯი არ გაყვება გადახდას ბითქოინის ქსელში.</translation>
     </message>
     <message>
@@ -2304,8 +2304,8 @@ Address: %4
     </message>
     <message>
         <location line="+113"/>
-        <source>Warning: Invalid Dogecoin address</source>
-        <translation>ყურადღება: არასწორია Dogecoin-მისამართი</translation>
+        <source>Warning: Invalid Fractalcoin address</source>
+        <translation>ყურადღება: არასწორია Fractalcoin-მისამართი</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -2416,7 +2416,7 @@ Address: %4
     </message>
     <message>
         <location line="+33"/>
-        <source>A message that was attached to the dogecoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Dogecoin network.</source>
+        <source>A message that was attached to the fractalcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Fractalcoin network.</source>
         <translation>მესიჯი, რომელიც თან ერთვის მონეტებს:  URI, რომელიც შეინახება ტრანსაქციასთან ერთად თქვენთვის. შენიშვნა: მესიჯი არ გაყვება გადახდას ბითქოინის ქსელში.</translation>
     </message>
     <message>
@@ -2441,8 +2441,8 @@ Address: %4
     <name>ShutdownWindow</name>
     <message>
         <location filename="../utilitydialog.cpp" line="+48"/>
-        <source>Dogecoin Core is shutting down...</source>
-        <translation>Dogecoin Core იხურება...</translation>
+        <source>Fractalcoin Core is shutting down...</source>
+        <translation>Fractalcoin Core იხურება...</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2511,7 +2511,7 @@ Address: %4
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Dogecoin address</source>
+        <source>Sign the message to prove you own this Fractalcoin address</source>
         <translation>მოაწერეთ ხელი იმის დასადასტურებლად, რომ ეს მისამართი თქვენია</translation>
     </message>
     <message>
@@ -2547,8 +2547,8 @@ Address: %4
     </message>
     <message>
         <location line="+37"/>
-        <source>Verify the message to ensure it was signed with the specified Dogecoin address</source>
-        <translation>შეამოწმეთ, რომ მესიჯი ხელმოწერილია მითითებული Dogecoin-მისამართით</translation>
+        <source>Verify the message to ensure it was signed with the specified Fractalcoin address</source>
+        <translation>შეამოწმეთ, რომ მესიჯი ხელმოწერილია მითითებული Fractalcoin-მისამართით</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2562,7 +2562,7 @@ Address: %4
     </message>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+30"/>
-        <source>Enter a Dogecoin address (e.g. DJ7zB7c5BsB9UJLy1rKQtY7c6CQfGiaRLM)</source>
+        <source>Enter a Fractalcoin address (e.g. DJ7zB7c5BsB9UJLy1rKQtY7c6CQfGiaRLM)</source>
         <translation>შეიყვანეთ ბიტკოინ-მისამართი (მაგ. DJ7zB7c5BsB9UJLy1rKQtY7c6CQfGiaRLM)</translation>
     </message>
     <message>
@@ -2641,13 +2641,13 @@ Address: %4
     <name>SplashScreen</name>
     <message>
         <location filename="../splashscreen.cpp" line="+28"/>
-        <source>Dogecoin Core</source>
-        <translation>Dogecoin Core</translation>
+        <source>Fractalcoin Core</source>
+        <translation>Fractalcoin Core</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>The Dogecoin Core developers</source>
-        <translation>Dogecoin Core-ს ავტორები</translation>
+        <source>The Fractalcoin Core developers</source>
+        <translation>Fractalcoin Core-ს ავტორები</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3214,7 +3214,7 @@ Address: %4
     </message>
 </context>
 <context>
-    <name>dogecoin-core</name>
+    <name>fractalcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+221"/>
         <source>Usage:</source>
@@ -3237,13 +3237,13 @@ Address: %4
     </message>
     <message>
         <location line="+22"/>
-        <source>Specify configuration file (default: dogecoin.conf)</source>
-        <translation>მიუთითეთ საკონფიგურაციო ფაილი (ნაგულისხმევია: dogecoin.conf)</translation>
+        <source>Specify configuration file (default: fractalcoin.conf)</source>
+        <translation>მიუთითეთ საკონფიგურაციო ფაილი (ნაგულისხმევია: fractalcoin.conf)</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: dogecoind.pid)</source>
-        <translation>მიუთითეთ pid ფაილი (ნაგულისხმევია: dogecoind.pid)</translation>
+        <source>Specify pid file (default: fractalcoind.pid)</source>
+        <translation>მიუთითეთ pid ფაილი (ნაგულისხმევია: fractalcoind.pid)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -3320,24 +3320,24 @@ Address: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=dogecoinrpc
+rpcuser=fractalcoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Dogecoin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;Fractalcoin Alert&quot; admin@foo.com
 </source>
         <translation>%s, მიუთითეთ rpcpassword საკონფიგურაციო ფაილში:
 %s
 რეკომენდებულია შემდეგი შემთხვევითი პაროლი:
-rpcuser=dogecoinrpc
+rpcuser=fractalcoinrpc
 rpcpassword=%s
 (ამის დამახსოვრება არ გჭირდებათ)
 სახელი და პაროლი ერთმანეთს არ უნდა ემთხვეოდეს.
 თუ ფაილი არ არსებობს, შექმენით იგი უფლებებით owner-readable-only.
 ასევე რეკომენდებულია დააყენოთ alertnotify რათა მიიღოთ შეტყობინებები პრობლემების შესახებ;
-მაგალითად: alertnotify=echo %%s | mail -s &quot;Dogecoin Alert&quot; admin@foo.com
+მაგალითად: alertnotify=echo %%s | mail -s &quot;Fractalcoin Alert&quot; admin@foo.com
 </translation>
     </message>
     <message>
@@ -3357,8 +3357,8 @@ rpcpassword=%s
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. Dogecoin Core is probably already running.</source>
-        <translation>მონაცემთა კატალოგის %s ბლოკირება ვერ ხერხდება. შესაძლოა Dogecoin უკვე გაშვებულია.</translation>
+        <source>Cannot obtain a lock on data directory %s. Fractalcoin Core is probably already running.</source>
+        <translation>მონაცემთა კატალოგის %s ბლოკირება ვერ ხერხდება. შესაძლოა Fractalcoin უკვე გაშვებულია.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3402,8 +3402,8 @@ rpcpassword=%s
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Dogecoin Core will not work properly.</source>
-        <translation>ყურადღება: შეამოწმეთ თქვენი კომპიუტერის სისტემური თარიღი და დრო! თუ ისინი არასწორია, Dogecoin ვერ იმუშავებს კორექტულად.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Fractalcoin Core will not work properly.</source>
+        <translation>ყურადღება: შეამოწმეთ თქვენი კომპიუტერის სისტემური თარიღი და დრო! თუ ისინი არასწორია, Fractalcoin ვერ იმუშავებს კორექტულად.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3437,13 +3437,13 @@ rpcpassword=%s
     </message>
     <message>
         <location line="+1"/>
-        <source>Dogecoin Core Daemon</source>
-        <translation>Dogecoin Core დემონი</translation>
+        <source>Fractalcoin Core Daemon</source>
+        <translation>Fractalcoin Core დემონი</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Dogecoin Core RPC client version</source>
-        <translation>Dogecoin-კლიენტის RPC-ვერსია</translation>
+        <source>Fractalcoin Core RPC client version</source>
+        <translation>Fractalcoin-კლიენტის RPC-ვერსია</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3642,8 +3642,8 @@ rpcpassword=%s
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to Dogecoin Core server</source>
-        <translation>კომანდის გაგზავნა Dogecoin-სერვერზე</translation>
+        <source>Send command to Fractalcoin Core server</source>
+        <translation>კომანდის გაგზავნა Fractalcoin-სერვერზე</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -3662,8 +3662,8 @@ rpcpassword=%s
     </message>
     <message>
         <location line="+2"/>
-        <source>Start Dogecoin Core server</source>
-        <translation>Dogecoin-სერვერის გაშვება</translation>
+        <source>Start Fractalcoin Core server</source>
+        <translation>Fractalcoin-სერვერის გაშვება</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3672,8 +3672,8 @@ rpcpassword=%s
     </message>
     <message>
         <location line="+10"/>
-        <source>Usage (deprecated, use dogecoin-cli):</source>
-        <translation>გამოყენება (მოძველებულია, გამოიყენეთ dogecoin-cli):</translation>
+        <source>Usage (deprecated, use fractalcoin-cli):</source>
+        <translation>გამოყენება (მოძველებულია, გამოიყენეთ fractalcoin-cli):</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -3937,13 +3937,13 @@ rpcpassword=%s
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Dogecoin Core</source>
-        <translation>არ იტვირთება wallet.dat: საფულეს სჭირდება Dogecoin-ის ახალი ვერსია</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Fractalcoin Core</source>
+        <translation>არ იტვირთება wallet.dat: საფულეს სჭირდება Fractalcoin-ის ახალი ვერსია</translation>
     </message>
     <message>
         <location line="+98"/>
-        <source>Wallet needed to be rewritten: restart Dogecoin Core to complete</source>
-        <translation>საჭიროა საფულის აღდგენა: დაარესტარტეთ Dogecoin </translation>
+        <source>Wallet needed to be rewritten: restart Fractalcoin Core to complete</source>
+        <translation>საჭიროა საფულის აღდგენა: დაარესტარტეთ Fractalcoin </translation>
     </message>
     <message>
         <location line="-100"/>
@@ -4002,8 +4002,8 @@ rpcpassword=%s
     </message>
     <message>
         <location line="-32"/>
-        <source>Unable to bind to %s on this computer. Dogecoin Core is probably already running.</source>
-        <translation>ვერ ხერხდება მიბმა %s-თან ამ კომპიუტერზე. შეიძლება Dogecoin უკვე გაშვებულია.</translation>
+        <source>Unable to bind to %s on this computer. Fractalcoin Core is probably already running.</source>
+        <translation>ვერ ხერხდება მიბმა %s-თან ამ კომპიუტერზე. შეიძლება Fractalcoin უკვე გაშვებულია.</translation>
     </message>
     <message>
         <location line="+95"/>

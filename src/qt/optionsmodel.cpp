@@ -51,10 +51,10 @@ void OptionsModel::Init()
 
     // Display
     if (!settings.contains("nDisplayUnit"))
-        settings.setValue("nDisplayUnit", BitcoinUnits::DOGE);
+        settings.setValue("nDisplayUnit", BitcoinUnits::FRAC);
     nDisplayUnit = settings.value("nDisplayUnit").toInt();
     if(!BitcoinUnits::valid(nDisplayUnit))
-        nDisplayUnit = BitcoinUnits::DOGE;
+        nDisplayUnit = BitcoinUnits::FRAC;
 
     if (!settings.contains("bDisplayAddresses"))
         settings.setValue("bDisplayAddresses", false);

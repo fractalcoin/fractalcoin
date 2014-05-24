@@ -1,6 +1,6 @@
 [Protocol]
-exec=dogecoin-qt '%u'
-protocol=dogecoin
+exec=fractalcoin-qt '%u'
+protocol=fractalcoin
 input=none
 output=none
 helper=true

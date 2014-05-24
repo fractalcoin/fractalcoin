@@ -1,5 +1,5 @@
 ---
-name: "dogecoin"
+name: "fractalcoin"
 suites:
 - "precise"
 architectures:
@@ -95,4 +95,4 @@ script: |
   done
   #
   cd $STAGING
-  find include lib bin host | sort | zip -X@ $OUTDIR/dogecoin-deps-linux${GBUILD_BITS}-gitian-r4.zip
+  find include lib bin host | sort | zip -X@ $OUTDIR/fractalcoin-deps-linux${GBUILD_BITS}-gitian-r4.zip
