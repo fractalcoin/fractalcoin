@@ -1,12 +1,12 @@
 [Desktop Entry]
 Encoding=UTF-8
-Name=Dogecoin
-Comment=Dogecoin P2P Cryptocurrency
-Comment[fr]=Dogecoin, monnaie virtuelle cryptographique pair à pair
-Comment[tr]=Dogecoin, eşten eşe kriptografik sanal para birimi
-Exec=dogecoin-qt %u
+Name=fractalcoin
+Comment=fractalcoin P2P Cryptocurrency
+Comment[fr]=fractalcoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=fractalcoin, eşten eşe kriptografik sanal para birimi
+Exec=fractalcoin-qt %u
 Terminal=false
 Type=Application
-Icon=dogecoin128
-MimeType=x-scheme-handler/dogecoin;
+Icon=fractalcoin128
+MimeType=x-scheme-handler/fractalcoin;
 Categories=Office;Finance;

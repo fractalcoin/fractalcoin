@@ -1,11 +1,11 @@
 *.tar.gz
 
 *.exe
-src/dogecoin
-src/dogecoind
-src/dogecoin-cli
-src/test/test_dogecoin
-src/qt/test/test_dogecoin-qt
+src/fractalcoin
+src/fractalcoind
+src/fractalcoin-cli
+src/test/test_fractalcoin
+src/qt/test/test_fractalcoin-qt
 
 Makefile.in
 aclocal.m4
@@ -35,7 +35,7 @@ src/qt/test/moc*.cpp
 *.orig
 *.o
 *.patch
-.dogecoin
+.fractalcoin
 *.a
 *.pb.cc
 *.pb.h
@@ -50,12 +50,12 @@ src/qt/test/moc*.cpp
 # Compilation and Qt preprocessor part
 *.qm
 Makefile
-dogecoin-qt
-Dogecoin-Qt.app
+fractalcoin-qt
+fractalcoin-Qt.app
 
 # Unit-tests
 Makefile.test
-dogecoin-qt_test
+fractalcoin-qt_test
 
 # Resources cpp
 qrc_*.cpp
@@ -70,7 +70,7 @@ build
 #lcov
 *.gcno
 /*.info
-test_dogecoin.coverage/
+test_fractalcoin.coverage/
 total.coverage/
 coverage_percent.txt
 
@@ -92,4 +92,4 @@ contrib/macbuild/boost/
 
 *.xcscheme
 
-contrib/macbuild/dogecoind.xcodeproj/xcuserdata/alan.xcuserdatad/xcschemes/xcschememanagement.plist
+contrib/macbuild/fractalcoind.xcodeproj/xcuserdata/alan.xcuserdatad/xcschemes/xcschememanagement.plist

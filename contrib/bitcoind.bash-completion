@@ -1,12 +1,12 @@
-# bash programmable completion for dogecoind(1) and dogecoin-cli(1)
+# bash programmable completion for fractalcoind(1) and fractalcoin-cli(1)
 # Copyright (c) 2012,2014 Christian von Roques <roques@mti.ag>
 # Distributed under the MIT/X11 software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-have dogecoind && {
+have fractalcoind && {
 
-# call $dogecoind for RPC
-_dogecoin_rpc() {
+# call $fractalcoind for RPC
+_fractalcoin_rpc() {
     # determine already specified args necessary for RPC
     local rpcargs=()
     for i in ${COMP_LINE}; do
@@ -16,23 +16,23 @@ _dogecoin_rpc() {
                 ;;
         esac
     done
-    $dogecoind "${rpcargs[@]}" "$@"
+    $fractalcoind "${rpcargs[@]}" "$@"
 }
 
-# Add dogecoin accounts to COMPREPLY
-_dogecoin_accounts() {
+# Add fractalcoin accounts to COMPREPLY
+_fractalcoin_accounts() {
     local accounts
-    accounts=$(_dogecoin_rpc listaccounts | awk '/".*"/ { a=$1; gsub(/"/, "", a); print a}')
+    accounts=$(_fractalcoin_rpc listaccounts | awk '/".*"/ { a=$1; gsub(/"/, "", a); print a}')
     COMPREPLY=( "${COMPREPLY[@]}" $( compgen -W "$accounts" -- "$cur" ) )
 }
 
-_dogecoind() {
+_fractalcoind() {
     local cur prev words=() cword
-    local dogecoind
+    local fractalcoind
 
-    # save and use original argument to invoke dogecoind
-    # dogecoind might not be in $PATH
-    dogecoind="$1"
+    # save and use original argument to invoke fractalcoind
+    # fractalcoind might not be in $PATH
+    fractalcoind="$1"
 
     COMPREPLY=()
     _get_comp_words_by_ref -n = cur prev words cword
@@ -70,7 +70,7 @@ _dogecoind() {
                 return 0
                 ;;
             move|setaccount)
-                _dogecoin_accounts
+                _fractalcoin_accounts
                 return 0
                 ;;
         esac
@@ -86,7 +86,7 @@ _dogecoind() {
             return 0
             ;;
         getaccountaddress|getaddressesbyaccount|getbalance|getnewaddress|getreceivedbyaccount|listtransactions|move|sendfrom|sendmany)
-            _dogecoin_accounts
+            _fractalcoin_accounts
             return 0
             ;;
     esac
@@ -110,12 +110,12 @@ _dogecoind() {
 
             # only parse --help if senseful
             if [[ -z "$cur" || "$cur" =~ ^- ]]; then
-                helpopts=$($dogecoind --help 2>&1 | awk '$1 ~ /^-/ { sub(/=.*/, "="); print $1 }' )
+                helpopts=$($fractalcoind --help 2>&1 | awk '$1 ~ /^-/ { sub(/=.*/, "="); print $1 }' )
             fi
 
             # only parse help if senseful
             if [[ -z "$cur" || "$cur" =~ ^[a-z] ]]; then
-                commands=$(_dogecoin_rpc help 2>/dev/null | awk '{ print $1; }')
+                commands=$(_fractalcoin_rpc help 2>/dev/null | awk '{ print $1; }')
             fi
 
             COMPREPLY=( $( compgen -W "$helpopts $commands" -- "$cur" ) )
@@ -129,7 +129,7 @@ _dogecoind() {
     esac
 }
 
-complete -F _dogecoind dogecoind dogecoin-cli
+complete -F _fractalcoind fractalcoind fractalcoin-cli
 }
 
 # Local variables:
