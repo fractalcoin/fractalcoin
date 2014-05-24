@@ -10,7 +10,6 @@
 #define BITCOIN_CORE_H
 
 #include "script.h"
-#include "scrypt.h"
 #include "serialize.h"
 #include "uint256.h"
 
@@ -383,12 +382,10 @@ public:
     }
 
     uint256 GetHash() const;
-    
+    //Same thing as GetHash, just too lazy to rmeove right now   
     uint256 GetPoWHash() const
     {
-        uint256 thash;
-        scrypt_1024_1_1_256(BEGIN(nVersion), BEGIN(thash));
-        return thash;
+        return GetHash();
     }
 
     int64_t GetBlockTime() const
