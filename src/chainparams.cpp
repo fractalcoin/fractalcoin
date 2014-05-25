@@ -132,11 +132,11 @@ public:
         genesis.nVersion = 1;
         genesis.nTime    = 1400978794;
         genesis.nBits    = 0x1e0ffff0;
-        genesis.nNonce   = 0;
+        genesis.nNonce = 616675;
 
         hashGenesisBlock = genesis.GetHash();
 
-        if (true)
+        if (false) 
         {
             printf("Searching for genesis block...\n");
             // This will figure out a valid hash and Nonce if you're
@@ -166,6 +166,15 @@ public:
             printf("genesis.GetHash = %s\n",genesis.GetHash().ToString().c_str());
             exit(1);
         }
+        /*
+        genesis.nTime = 1400978794 
+        genesis.nNonce = 616675 
+        genesis.hashMerkleRoot = 0dbd0ac2edb1fc884dc12061021171656ac6690823ca018c69bb1b00b9570e31
+        genesis.GetHash = 00000163f1b445b525b05db3482122e3494872d83e964cf8710db4e733897912
+        */
+
+        assert(hashGenesisBlock == uint256("0x00000163f1b445b525b05db3482122e3494872d83e964cf8710db4e733897912"));
+        assert(genesis.hashMerkleRoot == uint256("0x0dbd0ac2edb1fc884dc12061021171656ac6690823ca018c69bb1b00b9570e31"));
 
         //assert(hashGenesisBlock == uint256("0x1a91e3dace36e2be3bf030a65679fe821aa1d6ef92e7c9902eb318182c355691"));
         //assert(genesis.hashMerkleRoot == uint256("0x5b2a3f53f605d62c53e62932dac6925e3d74afa5a4b459745c36d42d0ed26a69"));
@@ -237,9 +246,9 @@ public:
 
         // Modify the testnet genesis block so the timestamp is valid for a later start so that they don't match
         genesis.nTime = 1400978800;
-        genesis.nNonce = 0;
+        genesis.nNonce = 172626;
         hashGenesisBlock = genesis.GetHash();
-        if (true)
+        if (false)
         {
             printf("Searching for testnet genesis block...\n");
             // This will figure out a valid hash and Nonce if you're
@@ -269,7 +278,13 @@ public:
             printf("genesis.GetHash = %s\n",genesis.GetHash().ToString().c_str());
             exit(1);
         }
-        //assert(hashGenesisBlock == uint256("0xbb0a78264637406b6360aad926284d544d7049f45189db5664f3c4d07350559e"));
+        /*
+        genesis.nTime = 1400978800 
+        genesis.nNonce = 172626 
+        genesis.hashMerkleRoot = 0dbd0ac2edb1fc884dc12061021171656ac6690823ca018c69bb1b00b9570e31
+        genesis.GetHash = 0000088b178e17036ccea90e3df82e9ff708e35cd4b68cae40eba5f98a567dd9
+        */
+        assert(hashGenesisBlock == uint256("0x0000088b178e17036ccea90e3df82e9ff708e35cd4b68cae40eba5f98a567dd9"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -310,7 +325,7 @@ public:
         hashGenesisBlock = genesis.GetHash();
         nDefaultPort = 18444;
         strDataDir = "regtest";
-        assert(hashGenesisBlock == uint256("0x3d2160a3b5dc4a9d62e7e66a295f70313ac808440ef7400d6c0772171ce973a5"));
+        //assert(hashGenesisBlock == uint256("0x3d2160a3b5dc4a9d62e7e66a295f70313ac808440ef7400d6c0772171ce973a5"));
 
         vSeeds.clear();  // Regtest mode doesn't have any DNS seeds.
     }
