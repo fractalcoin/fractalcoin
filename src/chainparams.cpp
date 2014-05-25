@@ -105,10 +105,10 @@ public:
         // The message start string is designed to be unlikely to occur in normal data.
         // The characters are rarely used upper ASCII, not valid as UTF-8, and produce
         // a large 4-byte int at any alignment.
-        pchMessageStart[0] = 0xc0;
-        pchMessageStart[1] = 0xc0;
-        pchMessageStart[2] = 0xc0;
-        pchMessageStart[3] = 0xc0;
+        pchMessageStart[0] = 0xc1;
+        pchMessageStart[1] = 0xc1;
+        pchMessageStart[2] = 0xc1;
+        pchMessageStart[3] = 0xc1;
         //owned and valid alert key
         vAlertPubKey = ParseHex("0451BBFA5B928095F41C9FF44DB2ECAD9257C550E720B46AE9AF06F3476D9967E5DBE9907972E6D85608C8A7B36D64BDFDA8900A2A5A67478FCBAB03A58D03A4AE");
         nDefaultPort = 33112; //p2p port
@@ -228,7 +228,7 @@ public:
         pchMessageStart[0] = 0xfc;
         pchMessageStart[1] = 0xc1;
         pchMessageStart[2] = 0xb7;
-        pchMessageStart[3] = 0xdc;
+        pchMessageStart[3] = 0xfc;
         //owned and valid alert key
         vAlertPubKey = ParseHex("0451BBFA5B928095F41C9FF44DB2ECAD9257C550E720B46AE9AF06F3476D9967E5DBE9907972E6D85608C8A7B36D64BDFDA8900A2A5A67478FCBAB03A58D03A4AE");
         nDefaultPort = 44112;
@@ -241,7 +241,7 @@ public:
         hashGenesisBlock = genesis.GetHash();
         if (true)
         {
-            printf("Searching for genesis block...\n");
+            printf("Searching for testnet genesis block...\n");
             // This will figure out a valid hash and Nonce if you're
             // creating a different genesis block:
             uint256 hashTarget = CBigNum().SetCompact(genesis.nBits).getuint256();
