@@ -1097,38 +1097,40 @@ int static generateMTRandom(unsigned int s, int range)
     return dist(gen);
 }
 
+
 int64_t GetBlockValue(int nHeight, int64_t nFees, uint256 prevHash)
 {
-    int64_t nSubsidy = 500000 * COIN;
+    int64_t reward = 1 * COIN;
+    int firstreward=1*60*24; //first day of mining
+    int secondreward=firstreward+(13*60*24); //next 13 days of mining
+    int thirdreward=secondreward+(13*60*24); //next 13 days of mining
+    int fourthreward=thirdreward+(1*60*24); //last day of "primary mining"
+    int finalreward=fourthreward+((60*24*225)-800); //final reward phase (after this, nothing)
 
-    std::string cseed_str = prevHash.ToString().substr(7,7);
-    const char* cseed = cseed_str.c_str();
-    long seed = hex2long(cseed);
-    int rand = generateMTRandom(seed, 999999);
-    int rand1 = 0;
-
-    if(nHeight < 100000)
+    if(nHeight < firstreward)
     {
-        nSubsidy = (1 + rand) * COIN;
+        return reward*4; //bonus phase of 4 coins 
     }
-    else if(nHeight < 145000)
+    else if(nHeight<secondreward)
     {
-        cseed_str = prevHash.ToString().substr(7,7);
-        cseed = cseed_str.c_str();
-        seed = hex2long(cseed);
-        rand1 = generateMTRandom(seed, 499999);
-        nSubsidy = (1 + rand1) * COIN;
+        return reward*2; //normal first phase of 2 coins
     }
-    else if(nHeight < 600000)
+    else if(nHeight<thirdreward)
     {
-        nSubsidy >>= (nHeight / 100000);
+        return reward*1; //normal last phase of 1 coin
+    }
+    else if(nHeight<fourthreward)
+    {
+        return reward*4; //end primary mining with a bang round of 4 coins
+    }
+    else if(nHeight<finalreward)
+    {
+        return reward/10; //final phase is 0.1 coin reward
     }
     else
     {
-        nSubsidy = 10000 * COIN;
+        return 0; //no coins
     }
-
-    return nSubsidy + nFees;
 }
 
 // New Difficulty adjustement and reward scheme by /u/lleti, rog1121, and DigiByte (DigiShield Developers).
