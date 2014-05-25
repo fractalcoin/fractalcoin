@@ -1132,12 +1132,12 @@ int64_t GetBlockValue(int nHeight, int64_t nFees, uint256 prevHash)
 }
 
 // New Difficulty adjustement and reward scheme by /u/lleti, rog1121, and DigiByte (DigiShield Developers).
-static const int64_t nTargetTimespan = 4 * 60 * 60; // Fractalcoin: every 4 hours
-static const int64_t nTargetTimespanNEW = 60 ; // Fractalcoin: every 1 minute
+//static const int64_t nTargetTimespan = 4 * 60 * 60; // Fractalcoin: every 4 hours
+static const int64_t nTargetTimespan = 60 ; // Fractalcoin: every 1 minute
 static const int64_t nTargetSpacing = 60; // Fractalcoin: 1 minute
 static const int64_t nInterval = nTargetTimespan / nTargetSpacing;
 
-static const int64_t nDiffChangeTarget = 145000; // Patch effective @ block 145000
+//static const int64_t nDiffChangeTarget = 145000; // Patch effective @ block 145000
 
 //
 // minimum amount of work that could possibly be required nTime after
@@ -1155,17 +1155,10 @@ unsigned int ComputeMinWork(unsigned int nBase, int64_t nTime)
     bnResult.SetCompact(nBase);
     while (nTime > 0 && bnResult < bnLimit)
     {
-        if(chainActive.Height()+1<nDiffChangeTarget){
-            // Maximum 400% adjustment...
-            bnResult *= 4;
-            // ... in best-case exactly 4-times-normal target time
-            nTime -= nTargetTimespan*4;
-        } else {
-            // Maximum 10% adjustment...
-            bnResult = (bnResult * 110) / 100;
-            // ... in best-case exactly 4-times-normal target time
-            nTime -= nTargetTimespanNEW*4;
-        }
+        // Maximum 10% adjustment...
+        bnResult = (bnResult * 110) / 100;
+        // ... in best-case exactly 4-times-normal target time
+        nTime -= nTargetTimespan*4;
     }
     if (bnResult > bnLimit)
         bnResult = bnLimit;
@@ -1177,16 +1170,13 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
     unsigned int nProofOfWorkLimit = Params().ProofOfWorkLimit().GetCompact();
 
     int nHeight = pindexLast->nHeight + 1;
-    bool fNewDifficultyProtocol = (nHeight >= nDiffChangeTarget);
     
     int64_t retargetTimespan = nTargetTimespan;
     int64_t retargetSpacing = nTargetSpacing;
     int64_t retargetInterval = nInterval;
     
-    if (fNewDifficultyProtocol) {
-        retargetInterval = nTargetTimespanNEW / nTargetSpacing;
-        retargetTimespan = nTargetTimespanNEW;
-    }
+    retargetInterval = nTargetTimespan / nTargetSpacing;
+    retargetTimespan = nTargetTimespan;
     
     // Genesis block
     if (pindexLast == NULL)
@@ -1230,34 +1220,12 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
     int64_t nActualTimespan = pindexLast->GetBlockTime() - pindexFirst->GetBlockTime();
     LogPrintf("  nActualTimespan = %d  before bounds\n", nActualTimespan);
     
-    if (fNewDifficultyProtocol) //DigiShield implementation - thanks to RealSolid & WDC for this code
-    {
-        // amplitude filter - thanks to daft27 for this code
-        nActualTimespan = retargetTimespan + (nActualTimespan - retargetTimespan)/8;
+    //DigiShield implementation - thanks to RealSolid & WDC for this code
+    // amplitude filter - thanks to daft27 for this code
+    nActualTimespan = retargetTimespan + (nActualTimespan - retargetTimespan)/8;
 
-        if (nActualTimespan < (retargetTimespan - (retargetTimespan/4)) ) nActualTimespan = (retargetTimespan - (retargetTimespan/4));
-        if (nActualTimespan > (retargetTimespan + (retargetTimespan/2)) ) nActualTimespan = (retargetTimespan + (retargetTimespan/2));
-    }
-    else if (pindexLast->nHeight+1 > 10000) {
-        if (nActualTimespan < nTargetTimespan/4)
-            nActualTimespan = nTargetTimespan/4;
-        if (nActualTimespan > nTargetTimespan*4)
-            nActualTimespan = nTargetTimespan*4;
-    }
-    else if (pindexLast->nHeight+1 > 5000)
-    {
-        if (nActualTimespan < nTargetTimespan/8)
-            nActualTimespan = nTargetTimespan/8;
-        if (nActualTimespan > nTargetTimespan*4)
-            nActualTimespan = nTargetTimespan*4;
-    }
-    else
-    {
-        if (nActualTimespan < nTargetTimespan/16)
-            nActualTimespan = nTargetTimespan/16;
-        if (nActualTimespan > nTargetTimespan*4)
-            nActualTimespan = nTargetTimespan*4;
-    }
+    if (nActualTimespan < (retargetTimespan - (retargetTimespan/4)) ) nActualTimespan = (retargetTimespan - (retargetTimespan/4));
+    if (nActualTimespan > (retargetTimespan + (retargetTimespan/2)) ) nActualTimespan = (retargetTimespan + (retargetTimespan/2));
 
     // Retarget
     CBigNum bnNew;
