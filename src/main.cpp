@@ -1,8 +1,9 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2011-2013 The Litecoin developers
-// Copyright (c) 2013-2014 The Fractalcoin developers
+// Copyright (c) 2013-2014 The Dogecoin developers
 // Copyright (c)      2014 The Inutoshi developers
+// Copyright (c)      2014 The Fractalcoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -55,9 +56,10 @@ bool fTxIndex = false;
 unsigned int nCoinCacheSize = 5000;
 
 /** Fees smaller than this (in satoshi) are considered zero fee (for transaction creation) */
-int64_t CTransaction::nMinTxFee = 100000000;  // Override with -mintxfee
+//                              0.00000123
+int64_t CTransaction::nMinTxFee = 00001000;  // Override with -mintxfee
 /** Fees smaller than this (in satoshi) are considered zero fee (for relaying and mining) */
-int64_t CTransaction::nMinRelayTxFee = 100000000;
+int64_t CTransaction::nMinRelayTxFee = 1000;
 
 static CMedianFilter<int> cPeerBlockCounts(8, 0); // Amount of blocks that other nodes claim to have
 
