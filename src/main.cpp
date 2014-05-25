@@ -1475,15 +1475,7 @@ bool VerifySignature(const CCoins& txFrom, const CTransaction& txTo, unsigned in
 
 int GetRequiredMaturityDepth(int nHeight)
 {
-
-    if (nHeight >= COINBASE_MATURITY_SWITCH)
-    {
-        return COINBASE_MATURITY_NEW;
-    }
-    else
-    {
-        return COINBASE_MATURITY;
-    }
+    return COINBASE_MATURITY;
 }
 
 bool CheckInputs(const CTransaction& tx, CValidationState &state, CCoinsViewCache &inputs, bool fScriptChecks, unsigned int flags, std::vector<CScriptCheck> *pvChecks)
