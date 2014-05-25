@@ -393,7 +393,6 @@ unsigned int LimitOrphanTxSize(unsigned int nMaxOrphans)
 
 
 
-//TODO: this isn't identical to fractalcoin reference client.
 bool IsStandardTx(const CTransaction& tx, string& reason)
 {
     if (tx.nVersion > CTransaction::CURRENT_VERSION || tx.nVersion < 1) {
@@ -704,13 +703,6 @@ int64_t GetMinFee(const CTransaction& tx, unsigned int nBytes, bool fAllowFree, 
 
     int64_t nMinFee = (1 + (int64_t)nBytes / 1000) * nBaseFee;
 
-    if (fAllowFree)
-    {
-            // Free transaction area
-            if (nBytes < 26000)
-                nMinFee = 0;
-    }
-
     // Fractalcoin
     // To limit dust spam, add nBaseFee for each output less than DUST_SOFT_LIMIT
     BOOST_FOREACH(const CTxOut& txout, tx.vout)
@@ -726,6 +718,8 @@ int64_t GetMinFee(const CTransaction& tx, unsigned int nBytes, bool fAllowFree, 
 bool AcceptToMemoryPool(CTxMemPool& pool, CValidationState &state, const CTransaction &tx, bool fLimitFree,
                         bool* pfMissingInputs, bool fRejectInsaneFee)
 {
+    fRejectInsaneFee=false;
+    fLimitFree=true;
     if (pfMissingInputs)
         *pfMissingInputs = false;
 
