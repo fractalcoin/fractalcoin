@@ -1101,13 +1101,16 @@ int static generateMTRandom(unsigned int s, int range)
 int64_t GetBlockValue(int nHeight, int64_t nFees, uint256 prevHash)
 {
     int64_t reward = 1 * COIN;
-    int firstreward=1*60*24; //first day of mining
+    int firstreward=1*60*24 + 1; //first day of mining (plus 1 block, for premine block)
     int secondreward=firstreward+(13*60*24); //next 13 days of mining
     int thirdreward=secondreward+(13*60*24); //next 13 days of mining
     int fourthreward=thirdreward+(1*60*24); //last day of "primary mining"
-    int finalreward=fourthreward+((60*24*225)-800); //final reward phase (after this, nothing)
-
-    if(nHeight < firstreward)
+    int finalreward=fourthreward+((60*24*221)-40); //final reward phase (after this, nothing)
+    if(nHeight==1)
+    {
+        return 500*reward; //premine of 500 coins, 0.5% of cap
+    }
+    else if(nHeight < firstreward)
     {
         return reward*4; //bonus phase of 4 coins 
     }
