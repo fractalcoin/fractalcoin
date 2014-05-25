@@ -1147,8 +1147,8 @@ unsigned int ComputeMinWork(unsigned int nBase, int64_t nTime)
 {
     const CBigNum &bnLimit = Params().ProofOfWorkLimit();
     // Testnet has min-difficulty blocks
-    // after nTargetSpacing*8 time between blocks:
-    if (TestNet() && nTime > nTargetSpacing*8)
+    // after nTargetSpacing*30 time between blocks:
+    if (TestNet() && nTime > nTargetSpacing*30)
         return bnLimit.GetCompact();
 
     CBigNum bnResult;
