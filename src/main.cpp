@@ -1137,12 +1137,10 @@ int64_t GetBlockValue(int nHeight, int64_t nFees, uint256 prevHash)
 }
 
 // New Difficulty adjustement and reward scheme by /u/lleti, rog1121, and DigiByte (DigiShield Developers).
-//static const int64_t nTargetTimespan = 4 * 60 * 60; // Fractalcoin: every 4 hours
 static const int64_t nTargetTimespan = 60 ; // Fractalcoin: every 1 minute
 static const int64_t nTargetSpacing = 60; // Fractalcoin: 1 minute
 static const int64_t nInterval = nTargetTimespan / nTargetSpacing;
 
-//static const int64_t nDiffChangeTarget = 145000; // Patch effective @ block 145000
 
 //
 // minimum amount of work that could possibly be required nTime after
