@@ -57,9 +57,9 @@ unsigned int nCoinCacheSize = 5000;
 
 /** Fees smaller than this (in satoshi) are considered zero fee (for transaction creation) */
 //                              0.00000123
-int64_t CTransaction::nMinTxFee = 00001000;  // Override with -mintxfee
+int64_t CTransaction::nMinTxFee = 1000;  // Override with -mintxfee
 /** Fees smaller than this (in satoshi) are considered zero fee (for relaying and mining) */
-int64_t CTransaction::nMinRelayTxFee = 1000;
+int64_t CTransaction::nMinRelayTxFee = 500;
 
 static CMedianFilter<int> cPeerBlockCounts(8, 0); // Amount of blocks that other nodes claim to have
 
