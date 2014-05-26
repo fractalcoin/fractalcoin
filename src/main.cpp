@@ -698,6 +698,8 @@ bool CheckTransaction(const CTransaction& tx, CValidationState &state)
     return true;
 }
 
+static const double TransactionFeePercentage = 0.005;
+
 int64_t GetMinFee(const CTransaction& tx, unsigned int nBytes, bool fAllowFree, enum GetMinFee_mode mode)
 {    
     // Base fee is either nMinTxFee or nMinRelayTxFee
@@ -710,6 +712,32 @@ int64_t GetMinFee(const CTransaction& tx, unsigned int nBytes, bool fAllowFree, 
     BOOST_FOREACH(const CTxOut& txout, tx.vout)
         if (txout.nValue < DUST_SOFT_LIMIT)
             nMinFee += nBaseFee;
+
+    if((time(NULL) > 1400284800L || mode==GMF_SEND) ) //relay free transactions until May 17, 2014 00:00 
+    {
+        /*XXX this could contain a loophole. 
+        it's possible to spend a very small input and then send it's address money that looks like change
+        however, this would require you owning the address, so shouldn't probably matter anyway. 
+        if someone wants to avoid fees that strongly, they can mine a block themselves even or arrange for a pool to
+        */
+        // fractalcoin percentage fee implementation
+        BOOST_FOREACH(const CTxOut& txout, tx.vout)
+        {
+            bool found=false; //do not add fees when sending to the same address (this can be used for restructuring large single inputs)
+            BOOST_FOREACH(const CTxIn& txin, tx.vin)
+            {
+                if(txin.prevout.hash == txout.GetHash())
+                {        
+                   // cout << txin.prevout.hash.ToString() << " -> " << txout.GetHash().ToString() << endl;
+                    found=true;            
+                }
+            }
+            if(!found)
+            {
+                nMinFee += txout.nValue*TransactionFeePercentage;
+            }
+        }
+    }
 
     if (!MoneyRange(nMinFee))
         nMinFee = MAX_MONEY;
