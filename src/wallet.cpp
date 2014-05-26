@@ -1416,15 +1416,16 @@ bool CWallet::CreateTransaction(const vector<pair<CScript, int64_t> >& vecSend,
                     // send change to newly generated address
                     else
                     {
-                        //CBitcoinAddress bit;
-                        uint256 tmp;
-
+                        //XXX cleanup
                         BOOST_FOREACH(const PAIRTYPE(const CWalletTx*,unsigned int)& coin, setCoins)
-                            tmp=coin.first->GetHash();
-
+                            BOOST_FOREACH(const CTxOut& txout, coin.first->vout)
+                                scriptChange=txout.scriptPubKey;
+                        /*
                         CBitcoinAddress bit = CBitcoinAddress(tmp.ToString());
+                        cout << tmp.ToString() << endl;;
                         scriptChange.SetDestination(bit.Get());
-                       // scriptChange.SetDestination(tmp);
+                        */
+                        // scriptChange.SetDestination(tmp);
                         // Note: We use a new key here to keep it from being obvious which side is the change.
                         //  The drawback is that by not reusing a previous key, the change may be lost if a
                         //  backup is restored, if the backup doesn't have the new private key for the change.
