@@ -1142,7 +1142,7 @@ int64_t GetBlockValue(int nHeight, int64_t nFees, uint256 prevHash)
 static const int64_t nTargetTimespan = 60 ; // Fractalcoin: every 1 minute
 static const int64_t nTargetSpacing = 60; // Fractalcoin: 1 minute
 static const int64_t nInterval = nTargetTimespan / nTargetSpacing;
-
+static const int64_t nDifficultyBootstrap = 6; //How many blocks where digishield is allowed to bring difficulty up much higher than usual (400% rather than 10%)
 
 //
 // minimum amount of work that could possibly be required nTime after
@@ -1159,11 +1159,19 @@ unsigned int ComputeMinWork(unsigned int nBase, int64_t nTime)
     CBigNum bnResult;
     bnResult.SetCompact(nBase);
     while (nTime > 0 && bnResult < bnLimit)
-    {
-        // Maximum 10% adjustment...
-        bnResult = (bnResult * 110) / 100;
-        // ... in best-case exactly 4-times-normal target time
-        nTime -= nTargetTimespan*4;
+    { 
+        if(chainActive.Height()+1<nDifficultyBootstrap){
+            // Maximum 400% adjustment, for taking the chain from minimum difficulty to something to match a single CPU or GPU very quickly
+            // To avoid founders from being capable of instamining the first 25 blocks due to slow difficulty adjustments by digishield
+            bnResult *= 4;
+            // ... in best-case exactly 4-times-normal target time
+            nTime -= nTargetTimespan*4;
+        } else {
+            // Maximum 10% adjustment...
+            bnResult = (bnResult * 110) / 100;
+            // ... in best-case exactly 4-times-normal target time
+            nTime -= nTargetTimespanNEW*4;
+        }
     }
     if (bnResult > bnLimit)
         bnResult = bnLimit;
