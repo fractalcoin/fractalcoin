@@ -910,7 +910,7 @@ int CMerkleTx::GetBlocksToMaturity() const
     int nHeight = GetHeightInMainChain();
     int nMaturity = GetRequiredMaturityDepth(nHeight);
 
-    return max(0, (nMaturity+20) - GetDepthInMainChain());
+    return max(0, (nMaturity+1) - GetDepthInMainChain());
 
 }
 
