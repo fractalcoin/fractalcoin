@@ -1178,7 +1178,7 @@ unsigned int ComputeMinWork(unsigned int nBase, int64_t nTime)
             // Maximum 10% adjustment...
             bnResult = (bnResult * 110) / 100;
             // ... in best-case exactly 4-times-normal target time
-            nTime -= nTargetTimespanNEW*4;
+            nTime -= nTargetTimespan*4;
         }
     }
     if (bnResult > bnLimit)
