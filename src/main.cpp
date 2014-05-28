@@ -699,6 +699,11 @@ bool CheckTransaction(const CTransaction& tx, CValidationState &state)
 }
 
 static const double TransactionFeePercentage = 0.005;
+//The time when to begin sending transactions out with percentage based transaction fees
+static const time_t PercentageFeeSendingBegin = 1401325200L; //May 28th, 8pm EST
+//The time when to stop relaying free/cheap transactions and only relay ones with percentage fees
+static const time_t PercentageFeeRelayBegin = 1401336600L; //May 28th, 11pm EST
+
 
 int64_t GetMinFee(const CTransaction& tx, unsigned int nBytes, bool fAllowFree, enum GetMinFee_mode mode)
 {    
@@ -713,7 +718,8 @@ int64_t GetMinFee(const CTransaction& tx, unsigned int nBytes, bool fAllowFree, 
         if (txout.nValue < DUST_SOFT_LIMIT)
             nMinFee += nBaseFee;
 
-    if((time(NULL) > 1400284800L || mode==GMF_SEND) ) //relay free transactions until May 17, 2014 00:00 
+    time_t t=time(NULL);
+    if(t > PercentageFeeRelayBegin || (t > PercentageFeeSendingBegin && mode==GMF_SEND) )  
     {
         /*XXX this could contain a loophole. 
         it's possible to spend a very small input and then send it's address money that looks like change
@@ -728,7 +734,6 @@ int64_t GetMinFee(const CTransaction& tx, unsigned int nBytes, bool fAllowFree, 
             {
                 if(txin.prevout.hash == txout.GetHash())
                 {        
-                   // cout << txin.prevout.hash.ToString() << " -> " << txout.GetHash().ToString() << endl;
                     found=true;            
                 }
             }
@@ -1131,19 +1136,19 @@ int static generateMTRandom(unsigned int s, int range)
 int64_t GetBlockValue(int nHeight, int64_t nFees, uint256 prevHash)
 {
     int64_t reward = 1 * COIN;
-    /*
     int firstreward=1*60*24 + 1; //first day of mining (plus 1 block, for premine block)
     int secondreward=firstreward+(13*60*24); //next 13 days of mining
     int thirdreward=secondreward+(13*60*24); //next 13 days of mining
     int fourthreward=thirdreward+(1*60*24); //last day of "primary mining"
     int finalreward=fourthreward+((60*24*221)-40); //final reward phase (after this, nothing)
-    */
+    /*
     //for test only
     int firstreward=10; //first day of mining (plus 1 block, for premine block)
     int secondreward=firstreward+10; //next 13 days of mining
     int thirdreward=secondreward+10; //next 13 days of mining
     int fourthreward=thirdreward+10; //last day of "primary mining"
     int finalreward=fourthreward+10; //final reward phase (after this, nothing)
+    */
     if(nHeight==1)
     {
         return 500*reward; //premine of 500 coins, 0.5% of cap

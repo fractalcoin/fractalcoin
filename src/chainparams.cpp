@@ -118,7 +118,7 @@ public:
 
         // Build the genesis block. Note that the output of the genesis coinbase cannot
         // be spent as it did not originally exist in the database.
-        const char* pszTimestamp = "replace me";
+        const char* pszTimestamp = "replace me2";
         CTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -130,9 +130,9 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime    = 1400978794;
         genesis.nBits    = 0x1e0ffff0;
-        genesis.nNonce = 616675;
+        genesis.nTime = 1400978794;
+        genesis.nNonce = 1256792;
 
         hashGenesisBlock = genesis.GetHash();
 
@@ -167,14 +167,14 @@ public:
             exit(1);
         }
         /*
-        genesis.nTime = 1400978794 
-        genesis.nNonce = 616675 
-        genesis.hashMerkleRoot = 0dbd0ac2edb1fc884dc12061021171656ac6690823ca018c69bb1b00b9570e31
-        genesis.GetHash = 00000163f1b445b525b05db3482122e3494872d83e964cf8710db4e733897912
+genesis.nTime = 1400978794 
+genesis.nNonce = 1256792 
+genesis.hashMerkleRoot = b4328cf715dfa58d6b294b7dff5de4bbef201e4d139950a2aa3494008860e279
+genesis.GetHash = 00000a68a3b461fcb74c177ae7bad4cd46bbf9a9a1331b49113ff8e6eaa1f6b8
         */
 
-        assert(hashGenesisBlock == uint256("0x00000163f1b445b525b05db3482122e3494872d83e964cf8710db4e733897912"));
-        assert(genesis.hashMerkleRoot == uint256("0x0dbd0ac2edb1fc884dc12061021171656ac6690823ca018c69bb1b00b9570e31"));
+        assert(hashGenesisBlock == uint256("0x00000a68a3b461fcb74c177ae7bad4cd46bbf9a9a1331b49113ff8e6eaa1f6b8"));
+//        assert(genesis.hashMerkleRoot == uint256("0x0dbd0ac2edb1fc884dc12061021171656ac6690823ca018c69bb1b00b9570e31"));
 
         //assert(hashGenesisBlock == uint256("0x1a91e3dace36e2be3bf030a65679fe821aa1d6ef92e7c9902eb318182c355691"));
         //assert(genesis.hashMerkleRoot == uint256("0x5b2a3f53f605d62c53e62932dac6925e3d74afa5a4b459745c36d42d0ed26a69"));
@@ -246,7 +246,7 @@ public:
 
         // Modify the testnet genesis block so the timestamp is valid for a later start so that they don't match
         genesis.nTime = 1400978800;
-        genesis.nNonce = 172626;
+        genesis.nNonce = 261925;
         hashGenesisBlock = genesis.GetHash();
         if (false)
         {
@@ -279,12 +279,12 @@ public:
             exit(1);
         }
         /*
-        genesis.nTime = 1400978800 
-        genesis.nNonce = 172626 
-        genesis.hashMerkleRoot = 0dbd0ac2edb1fc884dc12061021171656ac6690823ca018c69bb1b00b9570e31
-        genesis.GetHash = 0000088b178e17036ccea90e3df82e9ff708e35cd4b68cae40eba5f98a567dd9
+genesis.nTime = 1400978800 
+genesis.nNonce = 261925 
+genesis.hashMerkleRoot = b4328cf715dfa58d6b294b7dff5de4bbef201e4d139950a2aa3494008860e279
+genesis.GetHash = 0000055765947ea6d0ca96f4642626f43ce43c95f618ea237e821daa580e5aa1
         */
-        assert(hashGenesisBlock == uint256("0x0000088b178e17036ccea90e3df82e9ff708e35cd4b68cae40eba5f98a567dd9"));
+        assert(hashGenesisBlock == uint256("0x0000055765947ea6d0ca96f4642626f43ce43c95f618ea237e821daa580e5aa1"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
