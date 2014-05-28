@@ -1416,15 +1416,6 @@ bool CWallet::CreateTransaction(const vector<pair<CScript, int64_t> >& vecSend,
                     // send change to newly generated address
                     else
                     {
-                        //CBitcoinAddress bit;
-                        uint256 tmp;
-
-                        BOOST_FOREACH(const PAIRTYPE(const CWalletTx*,unsigned int)& coin, setCoins)
-                            tmp=coin.first->GetHash();
-
-                        CBitcoinAddress bit = CBitcoinAddress(tmp.ToString());
-                        scriptChange.SetDestination(bit.Get());
-                       // scriptChange.SetDestination(tmp);
                         // Note: We use a new key here to keep it from being obvious which side is the change.
                         //  The drawback is that by not reusing a previous key, the change may be lost if a
                         //  backup is restored, if the backup doesn't have the new private key for the change.
@@ -1433,12 +1424,12 @@ bool CWallet::CreateTransaction(const vector<pair<CScript, int64_t> >& vecSend,
                         //  post-backup change.
 
                         // Reserve a new key pair from key pool
-                       /* CPubKey vchPubKey;
+                        CPubKey vchPubKey;
                         bool ret;
                         ret = reservekey.GetReservedKey(vchPubKey);
                         assert(ret); // should never fail, as we just unlocked
 
-                        scriptChange.SetDestination(vchPubKey.GetID()); */
+                        scriptChange.SetDestination(vchPubKey.GetID());
                     }
 
                     CTxOut newTxOut(nChange, scriptChange);
