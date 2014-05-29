@@ -357,7 +357,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+20"/>
         <source>&amp;Transactions</source>
-        <translation>&amp;Many History</translation>
+        <translation>&amp;History</translation>
     </message>
     <message>
         <location line="+1"/>
