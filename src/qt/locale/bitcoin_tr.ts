@@ -111,12 +111,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+6"/>
-        <source>Very sending addresses</source>
+        <source>Sending addresses</source>
         <translation>Yollama adresleri</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Much receiving addresses</source>
+        <source>Receiving addresses</source>
         <translation>Alım adresleri</translation>
     </message>
     <message>
@@ -404,12 +404,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+10"/>
-        <source>Very &amp;sending addresses...</source>
+        <source>&amp;sending addresses...</source>
         <translation>&amp;Gönderme adresleri...</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Much &amp;receiving addresses...</source>
+        <source>&amp;receiving addresses...</source>
         <translation>&amp;Alma adresleri...</translation>
     </message>
     <message>

@@ -111,12 +111,12 @@ Este produto inclui software desenvolvido pelo Projeto OpenSSL para uso no OpenS
     </message>
     <message>
         <location line="+6"/>
-        <source>Very sending addresses</source>
+        <source>Sending addresses</source>
         <translation>Enviando endereços</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Much receiving addresses</source>
+        <source>Receiving addresses</source>
         <translation>Recebendo endereços</translation>
     </message>
     <message>
@@ -404,12 +404,12 @@ Este produto inclui software desenvolvido pelo Projeto OpenSSL para uso no OpenS
     </message>
     <message>
         <location line="+10"/>
-        <source>Very &amp;sending addresses...</source>
+        <source>&amp;sending addresses...</source>
         <translation>Enviando endereço&amp;s...</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Much &amp;receiving addresses...</source>
+        <source>&amp;receiving addresses...</source>
         <translation>&amp;Receber endereços...</translation>
     </message>
     <message>

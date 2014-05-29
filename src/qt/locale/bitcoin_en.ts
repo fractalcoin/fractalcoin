@@ -119,12 +119,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+6"/>
-        <source>Very sending addresses</source>
+        <source>Sending addresses</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Much receiving addresses</source>
+        <source>Receiving addresses</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -342,7 +342,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-407"/>
         <source>&amp;Overview</source>
-        <translation>&amp;Wow</translation>
+        <translation>&amp;Overview</translation>
     </message>
     <message>
         <location line="-137"/>
@@ -412,12 +412,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+10"/>
-        <source>Very &amp;sending addresses...</source>
+        <source>&amp;Sending addresses...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Much &amp;receiving addresses...</source>
+        <source>&amp;Receiving addresses...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -483,12 +483,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+146"/>
         <source>&amp;Send</source>
-        <translation>&amp;Pls Send</translation>
+        <translation>&amp;Send</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>&amp;Receive</source>
-        <translation>&amp;Much Receive</translation>
+        <translation>&amp;Receive</translation>
     </message>
     <message>
         <location line="+46"/>
@@ -2384,8 +2384,8 @@ Address: %4
     </message>
     <message>
         <location line="+18"/>
-        <source>The address to send the payment to (e.g. DJ7zB7c5BsB9UJLy1rKQtY7c6CQfGiaRLM)</source>
-        <translation>The address to send the payment to (e.g. DJ7zB7c5BsB9UJLy1rKQtY7c6CQfGiaRLM)</translation>
+        <source>The address to send the payment to (e.g. FJ7zB7c5BsB9UJLy1rKQtY7c6CQfGiaRLM)</source>
+        <translation>The address to send the payment to (e.g. FJ7zB7c5BsB9UJLy1rKQtY7c6CQfGiaRLM)</translation>
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+30"/>
@@ -3313,8 +3313,8 @@ Address: %4
     </message>
     <message>
         <location line="-26"/>
-        <source>Listen for connections on &lt;port&gt; (default: 22556 or testnet: 44556)</source>
-        <translation>Listen for connections on &lt;port&gt; (default: 22556 or testnet: 44556)</translation>
+        <source>Listen for connections on &lt;port&gt; (default: 33112 or testnet: 44112)</source>
+        <translation>Listen for connections on &lt;port&gt; (default: 33112 or testnet: 44112)</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3523,7 +3523,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Fractalcoin Alert&quot; admin@
     </message>
     <message>
         <location line="+1"/>
-        <source>Connect to JSON-RPC on &lt;port&gt; (default: 22555 or testnet: 44555)</source>
+        <source>Connect to JSON-RPC on &lt;port&gt; (default: 33111 or testnet: 44111)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

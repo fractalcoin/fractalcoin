@@ -129,12 +129,6 @@ BitcoinGUI::BitcoinGUI(bool fIsTestnet, QWidget *parent) :
         setCentralWidget(rpcConsole);
     }
 
-    // Fractalcoin: Specify Comic Sans as new font.
-    QFont newFont("Comic Sans MS", 10);
-
-    // Fractalcoin: Set new application font
-    QApplication::setFont(newFont);
-
     // Accept D&D of URIs
     setAcceptDrops(true);
 
