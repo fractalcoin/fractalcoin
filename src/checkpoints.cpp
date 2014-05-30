@@ -32,7 +32,7 @@ namespace Checkpoints
         double fTransactionsPerDay;
     };
 
-    bool fEnabled = false;
+    bool fEnabled = true;
 
     // What makes a good checkpoint block?
     // + Is surrounded by blocks with reasonable timestamps
@@ -41,15 +41,8 @@ namespace Checkpoints
     // + Contains no strange transactions
     static MapCheckpoints mapCheckpoints =
         boost::assign::map_list_of
-        (     0, uint256("0x1a91e3dace36e2be3bf030a65679fe821aa1d6ef92e7c9902eb318182c355691"))
-        ( 42279, uint256("0x8444c3ef39a46222e87584ef956ad2c9ef401578bd8b51e8e4b9a86ec3134d3a"))
-        ( 42400, uint256("0x557bb7c17ed9e6d4a6f9361cfddf7c1fc0bdc394af7019167442b41f507252b4"))
-        ( 104679, uint256("0x35eb87ae90d44b98898fec8c39577b76cb1eb08e1261cfc10706c8ce9a1d01cf"))
-        ( 128370, uint256("0x3f9265c94cab7dc3bd6a2ad2fb26c8845cb41cff437e0a75ae006997b4974be6"))
-        ( 145000, uint256("0xcc47cae70d7c5c92828d3214a266331dde59087d4a39071fa76ddfff9b7bde72"))
-        ( 165393, uint256("0x7154efb4009e18c1c6a6a79fc6015f48502bcd0a1edd9c20e44cd7cbbe2eeef1"))
-        ( 186774, uint256("0x3c712c49b34a5f34d4b963750d6ba02b73e8a938d2ee415dcda141d89f5cb23a"))
-        ( 199992, uint256("0x3408ff829b7104eebaf61fd2ba2203ef2a43af38b95b353e992ef48f00ebb190"))
+        (     0, uint256("0x00000a68a3b461fcb74c177ae7bad4cd46bbf9a9a1331b49113ff8e6eaa1f6b8"))
+        //( 1, uint256("0x8444c3ef39a46222e87584ef956ad2c9ef401578bd8b51e8e4b9a86ec3134d3a"))
         ;
     static const CCheckpointData data = {
         &mapCheckpoints,
@@ -61,7 +54,8 @@ namespace Checkpoints
 
     static MapCheckpoints mapCheckpointsTestnet =
         boost::assign::map_list_of
-        (     0, uint256("0x"))
+        (     0, uint256("0x0000055765947ea6d0ca96f4642626f43ce43c95f618ea237e821daa580e5aa1"))
+        ( 1, uint256("0x000005f1341a691cc44fce7a136568fc5063b2d1390f8a3e19c473bc1b295a54")) //premine block
         ;
     static const CCheckpointData dataTestnet = {
         &mapCheckpointsTestnet,
