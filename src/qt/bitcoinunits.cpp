@@ -19,7 +19,7 @@ QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
     unitlist.append(MFRAC);
     unitlist.append(kFRAC);
     unitlist.append(FRAC);
-    unitlist.append(Koinu);
+    unitlist.append(uFRAC);
     return unitlist;
 }
 
@@ -30,7 +30,7 @@ bool BitcoinUnits::valid(int unit)
     case MFRAC:
     case kFRAC:
     case FRAC:
-    case Koinu:
+    case uFRAC:
         return true;
     default:
         return false;
@@ -44,7 +44,7 @@ QString BitcoinUnits::name(int unit)
     case MFRAC: return QString("MFRAC");
     case kFRAC: return QString("kFRAC");
     case FRAC: return QString("FRAC");
-    case Koinu: return QString("Koinu");
+    case uFRAC: return QString("uFRAC");
     default: return QString("???");
     }
 }
@@ -56,7 +56,7 @@ QString BitcoinUnits::description(int unit)
     case MFRAC: return QString("Mega-Fractalcoin (1,000,000 FRAC)");
     case kFRAC: return QString("Kilo-Fractalcoin (1000 FRAC)");
     case FRAC: return QString("Fractalcoin");
-    case Koinu: return QString("Koinu (1 / 100,000,000");
+    case uFRAC: return QString("uFRAC (1 / 100,000,000");
     default: return QString("???");
     }
 }
@@ -68,7 +68,7 @@ qint64 BitcoinUnits::factor(int unit)
     case MFRAC: return Q_INT64_C(100000000000000);
     case kFRAC: return Q_INT64_C(100000000000);
     case FRAC:  return Q_INT64_C(100000000);
-    case Koinu: return Q_INT64_C(1);
+    case uFRAC: return Q_INT64_C(1);
     default:    return Q_INT64_C(100000000);
     }
 }
@@ -80,7 +80,7 @@ qint64 BitcoinUnits::maxAmount(int unit)
     case MFRAC: return Q_INT64_C(900000);
     case kFRAC: return Q_INT64_C(900000000);
     case FRAC:  return Q_INT64_C(900000000000);    //less than the coin supply until the year 2170
-    case Koinu: return Q_INT64_C(9000000000000000000); // Slightly under max value for int64
+    case uFRAC: return Q_INT64_C(9000000000000000000); // Slightly under max value for int64
     default:   return 0;
     }
 }
@@ -92,7 +92,7 @@ int BitcoinUnits::amountDigits(int unit)
     case MFRAC: return 6;  // 900,000 (# digits, without commas)
     case kFRAC: return 9;  // 900,000,000
     case FRAC:  return 12; // 900,000,000,000
-    case Koinu: return 19; // 9,000,000,000,000,000,000
+    case uFRAC: return 19; // 9,000,000,000,000,000,000
     default: return 0;
     }
 }
@@ -104,7 +104,7 @@ int BitcoinUnits::decimals(int unit)
     case MFRAC: return 14;
     case kFRAC: return 11;
     case FRAC: return 8;
-    case Koinu: return 0;
+    case uFRAC: return 0;
     default: return 0;
     }
 }

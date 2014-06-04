@@ -29,7 +29,7 @@ public:
         //formerly uFRAC
         MFRAC = 3,
         kFRAC = 4,
-        Koinu = 5
+        uFRAC = 5
     };
 
     //! @name Static API
