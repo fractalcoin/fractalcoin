@@ -1286,6 +1286,9 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlock *pb
     int64_t adjust=1;
     if(false)//pindexLast->nHeight > 1234)
     {
+        const static int stepcount=10;
+        const static int steps[stepcount]={10,20,30,40,50,60,70,80,90,100};
+        const static int adjusts[stepcount]={600,1200,1800,2400,3000,3600,4200,4800,5400,6000};
         //calibration of 10 means that each coin spent will cause difficulty to be 
         int64_t calibration=10*COIN; // the amount each coin spent "weighs" into the algorithm
         int64_t maxadjust=10; // 10% adjustment max
@@ -1308,7 +1311,7 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlock *pb
     bnNew.SetCompact(pindexLast->nBits);
     bnNew *= nActualTimespan;
     //scale up so that the adjustment actually has some resolution
-    bnNew /= retargetTimespan; //((retargetTimespan*10000)*adjust)/10000;
+    bnNew /= retargetTimespan; 
 
 
 
