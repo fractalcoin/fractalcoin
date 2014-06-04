@@ -698,7 +698,7 @@ bool CheckTransaction(const CTransaction& tx, CValidationState &state)
     return true;
 }
 
-static const double TransactionFeePercentage = 0.005;
+static const int64_t TransactionFeePercentage = 2*100; //this represents 0.005. 200/1 when inverted is 1/200, or 0.005
 //The time when to begin sending transactions out with percentage based transaction fees
 static const time_t PercentageFeeSendingBegin = 1401325200L; //May 28th, 8pm EST
 //The time when to stop relaying free/cheap transactions and only relay ones with percentage fees
@@ -739,7 +739,7 @@ int64_t GetMinFee(const CTransaction& tx, unsigned int nBytes, bool fAllowFree, 
             }
             if(!found)
             {
-                nMinFee += txout.nValue*TransactionFeePercentage;
+                nMinFee += txout.nValue/TransactionFeePercentage;
             }
         }
     }
@@ -1284,7 +1284,7 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlock *pb
 
     //fractalcoin diffishield modification:
     int64_t adjust=1;
-    if(pindexLast->nHeight > 1234)
+    if(false)//pindexLast->nHeight > 1234)
     {
         //calibration of 10 means that each coin spent will cause difficulty to be 
         int64_t calibration=10*COIN; // the amount each coin spent "weighs" into the algorithm
@@ -1308,7 +1308,7 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlock *pb
     bnNew.SetCompact(pindexLast->nBits);
     bnNew *= nActualTimespan;
     //scale up so that the adjustment actually has some resolution
-    bnNew /= ((retargetTimespan*10000)*adjust)/10000;
+    bnNew /= retargetTimespan; //((retargetTimespan*10000)*adjust)/10000;
 
 
 
