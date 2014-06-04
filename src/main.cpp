@@ -1219,7 +1219,7 @@ unsigned int ComputeMinWork(unsigned int nBase, int64_t nTime)
     return bnResult.GetCompact();
 }
 
-unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHeader *pblock)
+unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlock *pblock)
 {
     unsigned int nProofOfWorkLimit = Params().ProofOfWorkLimit().GetCompact();
 
@@ -1281,11 +1281,36 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
     if (nActualTimespan < (retargetTimespan - (retargetTimespan/4)) ) nActualTimespan = (retargetTimespan - (retargetTimespan/4));
     if (nActualTimespan > (retargetTimespan + (retargetTimespan/2)) ) nActualTimespan = (retargetTimespan + (retargetTimespan/2));
 
+
+    //fractalcoin diffishield modification:
+    int64_t adjust=1;
+    if(pindexLast->nHeight > 1234)
+    {
+        //calibration of 10 means that each coin spent will cause difficulty to be 
+        int64_t calibration=10*COIN; // the amount each coin spent "weighs" into the algorithm
+        int64_t maxadjust=10; // 10% adjustment max
+
+        int64_t sum=0;
+        BOOST_FOREACH(const CTransaction &tx, pblock->vtx)
+        {
+            sum+=tx.GetValueOut();
+        }
+        int64_t adjust=sum / calibration;
+        if(adjust>maxadjust)
+        {
+            adjust=maxadjust;
+        }
+        nActualTimespan/=adjust; //make more difficult for each coin spent
+    }
+
     // Retarget
     CBigNum bnNew;
     bnNew.SetCompact(pindexLast->nBits);
     bnNew *= nActualTimespan;
-    bnNew /= retargetTimespan;
+    //scale up so that the adjustment actually has some resolution
+    bnNew /= ((retargetTimespan*10000)*adjust)/10000;
+
+
 
     if (bnNew > Params().ProofOfWorkLimit())
         bnNew = Params().ProofOfWorkLimit();
@@ -1475,7 +1500,7 @@ void static InvalidBlockFound(CBlockIndex *pindex, const CValidationState &state
     }
 }
 
-void UpdateTime(CBlockHeader& block, const CBlockIndex* pindexPrev)
+void UpdateTime(CBlock& block, const CBlockIndex* pindexPrev)
 {
     block.nTime = max(pindexPrev->GetMedianTimePast()+1, GetAdjustedTime());
 

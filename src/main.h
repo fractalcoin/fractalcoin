@@ -171,9 +171,9 @@ bool GetTransaction(const uint256 &hash, CTransaction &tx, uint256 &hashBlock, b
 /** Find the best known block, and make it the tip of the block chain */
 bool ActivateBestChain(CValidationState &state);
 int64_t GetBlockValue(int nHeight, int64_t nFees, uint256 prevHash);
-unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHeader *pblock);
+unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlock *pblock);
 
-void UpdateTime(CBlockHeader& block, const CBlockIndex* pindexPrev);
+void UpdateTime(CBlock& block, const CBlockIndex* pindexPrev);
 
 /** Create a new block index entry for a given block hash */
 CBlockIndex * InsertBlockIndex(uint256 hash);
