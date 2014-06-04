@@ -1305,9 +1305,9 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlock *pb
        if the block containing your spend was mined, it would replace your weaker block. So, this makes 1 confirmation transactions significantly safer.
     */
     int64_t adjust=0;
-    if(false)//pindexLast->nHeight > 1234)
+    if(pindexLast->nHeight > 4346+10)
     {
-        const static int stepcount=10;
+        const static int stepcount=11;
         const static int steps[stepcount]={2*COIN,3*COIN,4*COIN,5*COIN,6*COIN,7*COIN,8*COIN,9*COIN,10*COIN,11*COIN,21*COIN};
         const static int adjusts[stepcount]={600,1200,1800,2400,3000,3600,4200,4800,5400,6000,12000};
         //calibration of 10 means that each coin spent will cause difficulty to be 
@@ -1326,6 +1326,7 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlock *pb
                 break;
             }
         }
+        printf("adjust: %i\n",adjust);
     }
 
     // Retarget
@@ -1333,7 +1334,7 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlock *pb
     bnNew.SetCompact(pindexLast->nBits);
     bnNew *= nActualTimespan;
     //slingshield effectively works by making the target block time longer temporarily
-    bnNew /= retargetTimespan+adjusts; 
+    bnNew /= retargetTimespan+adjust; 
 
 
 
