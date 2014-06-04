@@ -698,7 +698,8 @@ bool CheckTransaction(const CTransaction& tx, CValidationState &state)
     return true;
 }
 
-static const int64_t TransactionFeePercentage = 2*100; //this represents 0.005. 200/1 when inverted is 1/200, or 0.005
+static const int64_t TransactionFeeDivider = 200; //divider for outputs to specify transaction fee percentage (in this case, 0.5%)
+static const int64_t TransactionFeeDividerSelf = 1000; //divider for sending an input to output by same address to specify transaction fee percentage (in this case, 0.1%)
 //The time when to begin sending transactions out with percentage based transaction fees
 static const time_t PercentageFeeSendingBegin = 1401325200L; //May 28th, 8pm EST
 //The time when to stop relaying free/cheap transactions and only relay ones with percentage fees
@@ -739,7 +740,11 @@ int64_t GetMinFee(const CTransaction& tx, unsigned int nBytes, bool fAllowFree, 
             }
             if(!found)
             {
-                nMinFee += txout.nValue/TransactionFeePercentage;
+                nMinFee += txout.nValue/TransactionFeeDivider;
+            }
+            else
+            {
+                nMinFee+=txout.nValue/TransactionFeeDividerSelf;
             }
         }
     }
@@ -1282,36 +1287,53 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlock *pb
     if (nActualTimespan > (retargetTimespan + (retargetTimespan/2)) ) nActualTimespan = (retargetTimespan + (retargetTimespan/2));
 
 
-    //fractalcoin diffishield modification:
-    int64_t adjust=1;
+    //fractalcoin slingshield modification:
+    /*intentions:
+    This will make it so that blocks with many coins spent will be harder to solve.
+    This serves two purposes:
+    1. It's pretty much certain that when the block reward goes up significantly from percentage transaction fees, multipools will hop on
+       This makes it so that when the reward is higher, the difficulty is automatically a bit higher, ensuring multipools can't instamine the high value block
+    2. This increases overall network security, given the certainty that multipools won't always be mining this. 
+       If trying to do a signficant double spend, you'd have to spend the coins on both sides of the double-spend fork attempt. 
+       To comply with network rules, both sides would therefore be of higher difficulty(up to 20% higher). This is not a problem
+       for the legitimate fork though, because when the big spend and it's fees are seen, multipools would hop on.
+       This effectively makes it so that a significant network attack would require a 71% hashrate, rather than just 51%
+       Given that multipools will always mine big transaction blocks, that is. 
+
+       This effectively makes mining big fees slightly less profitable. So, when fees increase by 2%, difficulty of the block increases by 1%, 3% is 2%, etc. 
+       It's possible you could make a transaction with only mining fees to circumvent this, but this block would be less difficult, and as such, 
+       if the block containing your spend was mined, it would replace your weaker block. So, this makes 1 confirmation transactions significantly safer.
+    */
+    int64_t adjust=0;
     if(false)//pindexLast->nHeight > 1234)
     {
         const static int stepcount=10;
-        const static int steps[stepcount]={10,20,30,40,50,60,70,80,90,100};
-        const static int adjusts[stepcount]={600,1200,1800,2400,3000,3600,4200,4800,5400,6000};
+        const static int steps[stepcount]={2*COIN,3*COIN,4*COIN,5*COIN,6*COIN,7*COIN,8*COIN,9*COIN,10*COIN,11*COIN,21*COIN};
+        const static int adjusts[stepcount]={600,1200,1800,2400,3000,3600,4200,4800,5400,6000,12000};
         //calibration of 10 means that each coin spent will cause difficulty to be 
-        int64_t calibration=10*COIN; // the amount each coin spent "weighs" into the algorithm
-        int64_t maxadjust=10; // 10% adjustment max
-
         int64_t sum=0;
         BOOST_FOREACH(const CTransaction &tx, pblock->vtx)
         {
             sum+=tx.GetValueOut();
         }
-        int64_t adjust=sum / calibration;
-        if(adjust>maxadjust)
+        for(int i=0;i<stepcount;i++)
         {
-            adjust=maxadjust;
+            if(sum>steps[i])
+            {
+                adjust=adjusts[i];
+            }else
+            {
+                break;
+            }
         }
-        nActualTimespan/=adjust; //make more difficult for each coin spent
     }
 
     // Retarget
     CBigNum bnNew;
     bnNew.SetCompact(pindexLast->nBits);
     bnNew *= nActualTimespan;
-    //scale up so that the adjustment actually has some resolution
-    bnNew /= retargetTimespan; 
+    //slingshield effectively works by making the target block time longer temporarily
+    bnNew /= retargetTimespan+adjusts; 
 
 
 
