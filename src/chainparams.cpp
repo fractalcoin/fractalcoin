@@ -131,8 +131,8 @@ public:
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
         genesis.nBits    = 0x1e0ffff0;
-        genesis.nTime = 1400978794;
-        genesis.nNonce = 1256792;
+        genesis.nTime = 1400978994;
+        genesis.nNonce = 3429619;
 
         hashGenesisBlock = genesis.GetHash();
 
@@ -167,13 +167,14 @@ public:
             exit(1);
         }
         /*
-genesis.nTime = 1400978794 
-genesis.nNonce = 1256792 
+        genesis.nTime = 1400978994 
+genesis.nNonce = 3429619 
 genesis.hashMerkleRoot = b4328cf715dfa58d6b294b7dff5de4bbef201e4d139950a2aa3494008860e279
-genesis.GetHash = 00000a68a3b461fcb74c177ae7bad4cd46bbf9a9a1331b49113ff8e6eaa1f6b8
+genesis.GetHash = 00000084f0e8f8b3810f0271c546011e10e05d727315bf9c71c8ef8b93f0b92a
+
         */
 
-        assert(hashGenesisBlock == uint256("0x00000a68a3b461fcb74c177ae7bad4cd46bbf9a9a1331b49113ff8e6eaa1f6b8"));
+  //      assert(hashGenesisBlock == uint256("0x00000a68a3b461fcb74c177ae7bad4cd46bbf9a9a1331b49113ff8e6eaa1f6b8"));
 //        assert(genesis.hashMerkleRoot == uint256("0x0dbd0ac2edb1fc884dc12061021171656ac6690823ca018c69bb1b00b9570e31"));
 
         //assert(hashGenesisBlock == uint256("0x1a91e3dace36e2be3bf030a65679fe821aa1d6ef92e7c9902eb318182c355691"));
@@ -245,8 +246,8 @@ public:
         strDataDir = "testnet";
 
         // Modify the testnet genesis block so the timestamp is valid for a later start so that they don't match
-        genesis.nTime = 1400978800;
-        genesis.nNonce = 261925;
+        genesis.nTime = 1400978900;
+        genesis.nNonce = 462655;
         hashGenesisBlock = genesis.GetHash();
         if (false)
         {
@@ -278,13 +279,14 @@ public:
             printf("genesis.GetHash = %s\n",genesis.GetHash().ToString().c_str());
             exit(1);
         }
-        /*
-genesis.nTime = 1400978800 
-genesis.nNonce = 261925 
+        /*genesis.nTime = 1400978900 
+genesis.nNonce = 462655 
 genesis.hashMerkleRoot = b4328cf715dfa58d6b294b7dff5de4bbef201e4d139950a2aa3494008860e279
-genesis.GetHash = 0000055765947ea6d0ca96f4642626f43ce43c95f618ea237e821daa580e5aa1
+genesis.GetHash = 00000edd671056288398d5b17b82f7f6f10f8ed0995c313a8b51820338ec5401
+
+
         */
-        assert(hashGenesisBlock == uint256("0x0000055765947ea6d0ca96f4642626f43ce43c95f618ea237e821daa580e5aa1"));
+        //assert(hashGenesisBlock == uint256("0x0000055765947ea6d0ca96f4642626f43ce43c95f618ea237e821daa580e5aa1"));
 
         vFixedSeeds.clear();
         vSeeds.clear();

@@ -1305,7 +1305,7 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlock *pb
        if the block containing your spend was mined, it would replace your weaker block. So, this makes 1 confirmation transactions significantly safer.
     */
     int64_t adjust=0;
-    if(pindexLast->nHeight > 100)
+    if(pindexLast->nHeight > 50)
     {
         const static int stepcount=11;
         const static int steps[stepcount]={2*COIN,3*COIN,4*COIN,5*COIN,6*COIN,7*COIN,8*COIN,9*COIN,10*COIN,11*COIN,21*COIN};

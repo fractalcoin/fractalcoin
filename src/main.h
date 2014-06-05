@@ -62,7 +62,7 @@ static const int64_t DUST_SOFT_LIMIT = 100;
 /** Dust Hard Limit, ignored as wallet inputs (mininput default) */
 static const int64_t DUST_HARD_LIMIT = 10;
 /** Coinbase transaction outputs can only be spent after this number of new blocks (network rule) */
-static const int COINBASE_MATURITY = 60*6; // about 6 hours before blocks mature, so if something goes wrong pools can coordinate before payouts
+static const int COINBASE_MATURITY = 10;//60*6; // about 6 hours before blocks mature, so if something goes wrong pools can coordinate before payouts
 /** Threshold for nLockTime: below this value it is interpreted as block number, otherwise as UNIX timestamp. */
 static const unsigned int LOCKTIME_THRESHOLD = 500000000; // Tue Nov  5 00:53:20 1985 UTC
 /** Maximum number of script-checking threads allowed */
