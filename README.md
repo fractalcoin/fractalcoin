@@ -1,4 +1,4 @@
-# Fractalcoin Core [FRAC, Ð]
+# Fractalcoin Core [FRAC]
 ==========================
 
 ![Fractalcoin](http://static.tumblr.com/ppdj5y9/Ae9mxmxtp/300coin.png)
@@ -18,6 +18,7 @@ The key features of Fractalcoin:
 * After 28 days, mandatory transaction fees of 0.1-0.5%, to ensure mining remains profitable without coin supply inflation
 * Checkpoint enabled
 * Geographically diverse DNS seed nodes, to ensure fast wallet syncs
+* Small 0.5% premine
 
 
 http://fractalcoin.net/
@@ -34,13 +35,13 @@ Development is ongoing and the development team as well as other volunteers can 
 
 The reward schedule is very fast and vigurous, in order to get the high rate of inflation out of the way as soon as possible.
 
-* 1st block:  5000 coins, premined for support and development
-* 2-1441 (1 day): 40 coins, to spur excitement for the first day of mining
-* 1442-20161 (13 days): 20 coins
-* 20162-38882(13 days): 10 coins
-* 38883-40322(1 day): 40 coins, to give people that missed out on the first day of mining a final chance to get big blocks
-* 40323-318200(about 221 days): 1 coin (percentage based transaction fees should make it so that average reward is closer to 5-15 coins)
-* 318201 and up: 0 coins (again, percentage fees mean that significant rewards will still be seen)
+* 1st block:  5000 FRAC, premined for support and development
+* 2-1441 (1 day): 40 FRAC, to spur excitement for the first day of mining
+* 1442-20161 (13 days): 20 FRAC
+* 20162-38882(13 days): 10 FRAC
+* 38883-40322(1 day): 40 FRAC, to give people that missed out on the first day of mining a final chance to get big blocks
+* 40323-318200(about 221 days): 1 FRAC (percentage based transaction fees should make it so that average reward is closer to 5-15 coins)
+* 318201 and up: 0 FRAC (again, percentage fees mean that significant rewards will still be seen)
 
 ## Slingshield
 
@@ -68,6 +69,20 @@ This helps to ensure Slingshield works as expected, ensures the network stays st
 
 After 28 days, Fractalcoin's inflation rate drops to around 16%/year, and somewhere in that year, the inflation rate actually drops to zero. Fractalcoin's very fast schedule to zero inflation ensures that the price will stay stable, while percentage based transaction fees ensure that it will forever have a strong network.  
 
+## Premine
+
+To reward the founders and developers helping to make this coin possible (and the projected fair launch meaning we can't ninja mine), there is a 0.5% premine, or 5000 FRAC. 
+
+It is distributed as so:
+
+* 1000 coins each to the three founders of the coin (developer, graphics/media, marketing)
+* 1000 to the external contributers
+** 250 coins to Mac wallet compiler
+** 250 coins to Debian wallet package compiler
+** 250 coins for hosting and other infrastructure
+** 250 coins reserved (needed?)
+* 1000 coins reserved for promotions, giveaways, and bounties
+
 
 ##  Building fractalcoind/fractalcoin-cli/fractalcoin-qt
 
@@ -78,6 +93,7 @@ After 28 days, Fractalcoin's inflation rate drops to around 16%/year, and somewh
   - [Windows Build Notes](doc/build-msw.md)
 
 ## Network ports
-RPC 33111
-P2P 33112
+
+* RPC 33111
+* P2P 33112
 
