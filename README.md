@@ -1,68 +1,90 @@
-# Fractalcoin Core [FRAC, Ð]
+# Fractalcoin Core [FRAC]
 ==========================
 
 ![Fractalcoin](http://static.tumblr.com/ppdj5y9/Ae9mxmxtp/300coin.png)
 
-[![Build Status](https://travis-ci.org/fractalcoin/fractalcoin.svg?branch=1.7-dev)](https://travis-ci.org/fractalcoin/fractalcoin)
+## What is Fractalcoin?
+Fractalcoin is a cryptocurrency like Bitcoin, although with many key differences. Fractalcoin's wallet is forked from Bitcoin 0.9.2, and thus has a build process slightly different from most altcoins.
 
-## What is Fractalcoin? – Such coin
-Fractalcoin is a cryptocurrency like Bitcoin, although it does not use SHA256 as its proof of work (POW). Taking development cues from Tenebrix and Litecoin, Fractalcoin currently employs a simplified variant of scrypt.
+## Features
 
-http://fractalcoin.com/
+The key features of Fractalcoin:
 
-## License – Much license
+* X11 Proof of work (low power, cool hardware, ASIC resistant, etc)
+* One minute block times
+* Digishield is used initially for difficulty adjustment. After block 40322, Slingshield is used for difficulty adjustment
+* 90% of coins are minted in the first 28 days of mining (hence, very slow inflation rate after 28 days)
+* 1 Million coins total
+* After 28 days, mandatory transaction fees of 0.1-0.5%, to ensure mining remains profitable without coin supply inflation
+* Checkpoint enabled
+* Geographically diverse DNS seed nodes, to ensure fast wallet syncs
+* Small 0.5% premine
+
+
+http://fractalcoin.net/
+
+## License
 Fractalcoin is released under the terms of the MIT license. See [COPYING](COPYING)
 for more information or see http://opensource.org/licenses/MIT.
 
-## Development and contributions – omg developers
+## Development and contributions
 Development is ongoing and the development team as well as other volunteers can freely work in their own trees and submit pull requests when features or bug fixes are ready.
 
-## Very Much Frequently Asked Questions
 
-### How much fractal can exist? – So many puppies!
-Early 2015 (approximately a year and a half after release) there will be approximately 100,000,000,000 coins.
-Each subsequent block will grant 10,000 coins to encourage miners to continue to secure the network and make up for lost wallets on hard drives/phones/lost encryption passwords/etc.
+## Reward Schedule
 
-### How to get fractal? – To the moon!
-Fractalcoin uses a simplified variant of the scrypt key derivation function as its proof of work with a target time of one minute per block and difficulty readjustment after every block. The block rewards are fixed and halve every 100,000 blocks. Starting with the 600,000th block, a permanent reward of 10,000 Fractalcoin per block will be paid. 
+The reward schedule is very fast and vigurous, in order to get the high rate of inflation out of the way as soon as possible.
 
-Originally, a different payout scheme was envisioned with block rewards being determined by taking the maximum reward as per the block schedule and applying the result of a Mersenne Twister pseudo-random number generator to arrive at a number between 0 and the maximum reward. This was changed, starting with block 145,000, to prevent large pools from gaming the system and mining only high reward blocks. At the same time, the difficulty retargeting was also changed from four hours to once per block (every minute), implementing an algorithm courtesy of the DigiByte Coin development team, to lessen the impact of sudden increases and decreases of network hashing rate.
+* 1st block:  5000 FRAC, premined for support and development
+* 2-1441 (1 day): 40 FRAC, to spur excitement for the first day of mining
+* 1442-20161 (13 days): 20 FRAC
+* 20162-38882(13 days): 10 FRAC
+* 38883-40322(1 day): 40 FRAC, to give people that missed out on the first day of mining a final chance to get big blocks
+* 40323-318200(about 221 days): 1 FRAC (percentage based transaction fees should make it so that average reward is closer to 5-15 coins)
+* 318201 and up: 0 FRAC (again, percentage fees mean that significant rewards will still be seen)
 
-The current block reward schedule:
+## Slingshield
 
-1–99,000: 0–1,000,000 Fractalcoin 
+Digishield is used for difficulty adjustment when mining resembles a typical proof-of-work coin. However, when percentage fees kick in and the static rewards drop, a modified version of digishield will be used, thus named slingshield. 
 
-100,000–144,999: 0–500,000 Fractalcoin
+For blocks with no transactions, slingshield is exactly the same as digishield. Low rewards and percentage based fees could put loyal miners at a disadvantage, since multipools could swoop in when a high fee transaction is broadcast, and quickly mine the block, taking all of the fees from loyal miners without contributing significantly to network security or overall hashrate. 
 
-145,000–199,999: 250,000 Fractalcoin
+Slingshield fixes this problem while helping to enable a multipool's variable contribution to make the network signficantly more secure. 
 
-200,000–299,999: 125,000 Fractalcoin
+When a transaction is broadcast, and the amount of fees would increase the static block reward by 2%, the difficulty of the block being mined is increased by 1%. When the fee would increase block reward by 3%, difficulty is raised by 2%, etc. This ensures that high reward blocks (when multipools would typically hop on, but soon after leave) have a difficulty reflective of the expected hashrate. 
 
-300,000–399,999: 62,500 Fractalcoin
+Along with ensuring mining remains fair and block times remain constant, slingshield also increases difficulty in conducting a double spend(or other attack) by leveraging the variable amount of power contributed by multipools. This effectively ensures that to double spend a large amount of coins, you would need not 51% of the hashing power of the network, but rather up to 71% of the network.  
 
-400,000–499,999: 31,250 Fractalcoin
+A double spend with slingshield is made difficult because the malicious fork will require up to 20% more hashing power than the legitimate fork, but because of transaction fees, the legitimate fork will have no problem attracting multipools to mine the block quickly. 
 
-500,000–599,999: 15,625 Fractalcoin
+Slingshield is the **only** difficulty adjustment algorithm to increase network security by leveraging the profit hunting nature of multipools, while keeping things fair for loyal miners as well. 
 
-600,000+: 10,000 Fractalcoin
+## Percentage based fees
 
-The original block reward schedule with one-minute block targets and four-hour difficulty readjustment:
+To ensure mining stays profitable after rewards drop significantly, percentage based fees of 0.1% to 0.5%(depending on the exact structure) are charged on all transactions. 
 
-1–99,000: 0–1,000,000 Fractalcoin 
+This helps to ensure Slingshield works as expected, ensures the network stays strong, and distributes wealth in a fair manner without inflation.
 
-100,000–199,999: 0–500,000 Fractalcoin
+## Low inflation
 
-200,000–299,999: 0–250,000 Fractalcoin
+After 28 days, Fractalcoin's inflation rate drops to around 16%/year, and somewhere in that year, the inflation rate actually drops to zero. Fractalcoin's very fast schedule to zero inflation ensures that the price will stay stable, while percentage based transaction fees ensure that it will forever have a strong network.  
 
-300,000–399,999: 0–125,000 Fractalcoin
+## Premine
 
-400,000–499,999: 0–62,500 Fractalcoin
+To reward the founders and developers helping to make this coin possible (and the projected fair launch meaning we can't ninja mine), there is a 0.5% premine, or 5000 FRAC. 
 
-500,000–599,999: 0–31,250 Fractalcoin
+It is distributed as so:
 
-600,000+: 10,000 Fractalcoin
+* 1000 coins each to the three founders of the coin (developer, graphics/media, marketing)
+* 1000 to the external contributers
+** 250 coins to Mac wallet compiler
+** 250 coins to Debian wallet package compiler
+** 250 coins for hosting and other infrastructure
+** 250 coins reserved (needed?)
+* 1000 coins reserved for promotions, giveaways, and bounties
 
-### Wow plz make fractalcoind/fractalcoin-cli/fractalcoin-qt
+
+##  Building fractalcoind/fractalcoin-cli/fractalcoin-qt
 
   The following are developer notes on how to build Fractalcoin on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 
@@ -70,8 +92,8 @@ The original block reward schedule with one-minute block targets and four-hour d
   - [Unix Build Notes](doc/build-unix.md)
   - [Windows Build Notes](doc/build-msw.md)
 
-### Such ports
-RPC 22555
-P2P 22556
+## Network ports
 
-![](http://fractalsay.com/wow//////such/coin)
+* RPC 33111
+* P2P 33112
+
