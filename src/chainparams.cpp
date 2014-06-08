@@ -118,7 +118,8 @@ public:
 
         // Build the genesis block. Note that the output of the genesis coinbase cannot
         // be spent as it did not originally exist in the database.
-        const char* pszTimestamp = "replace me2";
+        //sha256("Source: Bergdahl physically abused by Taliban http://www.cnn.com/2014/06/06/politics/bowe-bergdahl-release/")
+        const char* pszTimestamp = "028dedef43de6a100620c2d3ac4c54d354dafaace897d2d5c96a1cd705025625";
         CTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -131,8 +132,8 @@ public:
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
         genesis.nBits    = 0x1e0ffff0;
-        genesis.nTime = 1400978994;
-        genesis.nNonce = 3429619;
+        genesis.nTime = 1402197204;
+        genesis.nNonce = 1939915;
 
         hashGenesisBlock = genesis.GetHash();
 
@@ -167,18 +168,15 @@ public:
             exit(1);
         }
         /*
-        genesis.nTime = 1400978994 
-genesis.nNonce = 3429619 
-genesis.hashMerkleRoot = b4328cf715dfa58d6b294b7dff5de4bbef201e4d139950a2aa3494008860e279
-genesis.GetHash = 00000084f0e8f8b3810f0271c546011e10e05d727315bf9c71c8ef8b93f0b92a
+genesis.nTime = 1402197204 
+genesis.nNonce = 1939915 
+genesis.hashMerkleRoot = e85e61ae6240a486898d36427284d1bfeb04d56edb137288b9e3614bc437c3b0
+genesis.GetHash = 0000092c4440834fd6f231f54a8dbc3e989091277e4be49cf28b7f62b0385b75
 
         */
 
-  //      assert(hashGenesisBlock == uint256("0x00000a68a3b461fcb74c177ae7bad4cd46bbf9a9a1331b49113ff8e6eaa1f6b8"));
-//        assert(genesis.hashMerkleRoot == uint256("0x0dbd0ac2edb1fc884dc12061021171656ac6690823ca018c69bb1b00b9570e31"));
-
-        //assert(hashGenesisBlock == uint256("0x1a91e3dace36e2be3bf030a65679fe821aa1d6ef92e7c9902eb318182c355691"));
-        //assert(genesis.hashMerkleRoot == uint256("0x5b2a3f53f605d62c53e62932dac6925e3d74afa5a4b459745c36d42d0ed26a69"));
+        assert(genesis.hashMerkleRoot == uint256("0xe85e61ae6240a486898d36427284d1bfeb04d56edb137288b9e3614bc437c3b0"));
+        assert(hashGenesisBlock == uint256("0x0000092c4440834fd6f231f54a8dbc3e989091277e4be49cf28b7f62b0385b75"));
 
         vSeeds.push_back(CDNSSeedData("earlz.net", "earlz.net"));
         vSeeds.push_back(CDNSSeedData("seed1.fractalcoin.net", "seed1.fractalcoin.net"));
@@ -255,8 +253,8 @@ public:
         strDataDir = "testnet";
 
         // Modify the testnet genesis block so the timestamp is valid for a later start so that they don't match
-        genesis.nTime = 1400978900;
-        genesis.nNonce = 462655;
+        genesis.nTime = 1402197254;
+        genesis.nNonce = 2239126;
         hashGenesisBlock = genesis.GetHash();
         if (false)
         {
@@ -288,14 +286,14 @@ public:
             printf("genesis.GetHash = %s\n",genesis.GetHash().ToString().c_str());
             exit(1);
         }
-        /*genesis.nTime = 1400978900 
-genesis.nNonce = 462655 
-genesis.hashMerkleRoot = b4328cf715dfa58d6b294b7dff5de4bbef201e4d139950a2aa3494008860e279
-genesis.GetHash = 00000edd671056288398d5b17b82f7f6f10f8ed0995c313a8b51820338ec5401
-
-
+        /*
+genesis.nTime = 1402197254 
+genesis.nNonce = 2239126 
+genesis.hashMerkleRoot = e85e61ae6240a486898d36427284d1bfeb04d56edb137288b9e3614bc437c3b0
+genesis.GetHash = 00000202f5e6dfd3764cad1bc6011484d8c3f1df023ece2e6e88b31c87f88d00
         */
-        //assert(hashGenesisBlock == uint256("0x0000055765947ea6d0ca96f4642626f43ce43c95f618ea237e821daa580e5aa1"));
+        assert(hashGenesisBlock==uint256("0x00000202f5e6dfd3764cad1bc6011484d8c3f1df023ece2e6e88b31c87f88d00"));
+        assert(genesis.hashMerkleRoot == uint256("0xe85e61ae6240a486898d36427284d1bfeb04d56edb137288b9e3614bc437c3b0"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
