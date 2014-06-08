@@ -1320,8 +1320,6 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlock *pb
                 break;
             }
         }
-        printf("adjust: %i\n",adjust);
-        printf("retarget: %i\n",(int)retargetTimespan);
     }
 
     // Retarget
