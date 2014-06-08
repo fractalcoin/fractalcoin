@@ -701,9 +701,12 @@ bool CheckTransaction(const CTransaction& tx, CValidationState &state)
 static const int64_t TransactionFeeDivider = 200; //divider for outputs to specify transaction fee percentage (in this case, 0.5%)
 static const int64_t TransactionFeeDividerSelf = 1000; //divider for sending an input to output by same address to specify transaction fee percentage (in this case, 0.1%)
 //The time when to begin sending transactions out with percentage based transaction fees
-static const time_t PercentageFeeSendingBegin = 1401325200L; //May 28th, 8pm EST
+
+
+static const time_t CoinLaunchTime=1402790400L; //Sat, 14 Jun 2014 20:00:00 -0400
+static const time_t PercentageFeeSendingBegin = CoinLaunchTime+(60*60*24*26); //26 days after launch
 //The time when to stop relaying free/cheap transactions and only relay ones with percentage fees
-static const time_t PercentageFeeRelayBegin = 1401336600L; //May 28th, 11pm EST
+static const time_t PercentageFeeRelayBegin = CoinLaunchTime+(60*60*24*28); //28 days after launch
 
 
 int64_t GetMinFee(const CTransaction& tx, unsigned int nBytes, bool fAllowFree, enum GetMinFee_mode mode)
@@ -1140,43 +1143,36 @@ int static generateMTRandom(unsigned int s, int range)
 
 int64_t GetBlockValue(int nHeight, int64_t nFees, uint256 prevHash)
 {
-    int64_t reward = 1 * COIN;
+    //1M coins total. 5000 premine, 40 per block after, etc etc
+    int64_t reward = 10 * COIN;
     int firstreward=1*60*24 + 1; //first day of mining (plus 1 block, for premine block)
     int secondreward=firstreward+(13*60*24); //next 13 days of mining
     int thirdreward=secondreward+(13*60*24); //next 13 days of mining
     int fourthreward=thirdreward+(1*60*24); //last day of "primary mining"
     int finalreward=fourthreward+((60*24*221)-40); //final reward phase (after this, nothing)
-    /*
-    //for test only
-    int firstreward=10; //first day of mining (plus 1 block, for premine block)
-    int secondreward=firstreward+10; //next 13 days of mining
-    int thirdreward=secondreward+10; //next 13 days of mining
-    int fourthreward=thirdreward+10; //last day of "primary mining"
-    int finalreward=fourthreward+10; //final reward phase (after this, nothing)
-    */
     if(nHeight==1)
     {
         return 500*reward; //premine of 500 coins, 0.5% of cap
     }
     else if(nHeight < firstreward)
     {
-        return reward*4; //bonus phase of 4 coins 
+        return reward*4; //bonus phase of 40 coins 
     }
     else if(nHeight<secondreward)
     {
-        return reward*2; //normal first phase of 2 coins
+        return reward*2; //normal first phase of 20 coins
     }
     else if(nHeight<thirdreward)
     {
-        return reward*1; //normal last phase of 1 coin
+        return reward*1; //normal last phase of 10 coin
     }
     else if(nHeight<fourthreward)
     {
-        return reward*4; //end primary mining with a bang round of 4 coins
+        return reward*4; //end primary mining with a bang round of 40 coins
     }
     else if(nHeight<finalreward)
     {
-        return reward/10; //final phase is 0.1 coin reward
+        return reward/10; //final phase is 1 coin reward
     }
     else
     {
@@ -1246,7 +1242,7 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlock *pb
             // Special difficulty rule for testnet:
             // If the new block's timestamp is more than 2* nTargetSpacing minutes
             // then allow mining of a min-difficulty block.
-            if (pblock->nTime > pindexLast->nTime + nTargetSpacing*2)
+            if (pblock->nTime > pindexLast->nTime + nTargetSpacing*30)
                 return nProofOfWorkLimit;
             else
             {
@@ -1302,7 +1298,7 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlock *pb
        if the block containing your spend was mined, it would replace your weaker block. So, this makes 1 confirmation transactions significantly safer.
     */
     int64_t adjust=0;
-    if(pindexLast->nHeight > 50)
+    if(pindexLast->nHeight > 40323)
     {
         const static int stepcount=11;
         const static int steps[stepcount]={2*COIN,3*COIN,4*COIN,5*COIN,6*COIN,7*COIN,8*COIN,9*COIN,10*COIN,11*COIN,21*COIN};
