@@ -1152,7 +1152,7 @@ int64_t GetBlockValue(int nHeight, int64_t nFees, uint256 prevHash)
     int finalreward=fourthreward+((60*24*221)-40); //final reward phase (after this, nothing)
     if(nHeight==1)
     {
-        return 500*reward; //premine of 500 coins, 0.5% of cap
+        return 500*reward; //premine of 5000 coins, 0.5% of cap
     }
     else if(nHeight < firstreward)
     {
@@ -1298,12 +1298,13 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlock *pb
        if the block containing your spend was mined, it would replace your weaker block. So, this makes 1 confirmation transactions significantly safer.
     */
     int64_t adjust=0;
-    if(pindexLast->nHeight > 40323)
+    if(pindexLast->nHeight > 40323) //don't activate til rewards drop
     {
-        const static int stepcount=11;
-        const static int steps[stepcount]={2*COIN,3*COIN,4*COIN,5*COIN,6*COIN,7*COIN,8*COIN,9*COIN,10*COIN,11*COIN,21*COIN};
-        const static int adjusts[stepcount]={600,1200,1800,2400,3000,3600,4200,4800,5400,6000,12000};
-        //calibration of 10 means that each coin spent will cause difficulty to be 
+        const static int64_t stepcount=12;
+        //min fees: 0.1, 0.2, etc etc corresponding to 1% increase, 2% increase etc
+        const static int64_t steps[stepcount]={10*COIN,20*COIN,30*COIN,40*COIN,50*COIN,60*COIN,70*COIN,80*COIN,90*COIN,100*COIN,110*COIN,210*COIN};
+        //difficulty increase in milliseconds. Corresponds to 0.5% increase, 1%, 2%, etc
+        const static int64_t adjusts[stepcount]={300,600,1200,1800,2400,3000,3600,4200,4800,5400,6000,12000};
         int64_t sum=0;
         BOOST_FOREACH(const CTransaction &tx, pblock->vtx)
         {
@@ -1327,7 +1328,7 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlock *pb
     CBigNum bnNew;
     bnNew.SetCompact(pindexLast->nBits);
     //scale up for millisecond granularity
-    int scale=1000;
+    int64_t scale=1000;
     bnNew *= nActualTimespan*scale;
     //slingshield effectively works by making the target block time longer temporarily
     bnNew /= (retargetTimespan*scale)+adjust; 
