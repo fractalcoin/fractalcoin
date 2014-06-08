@@ -172,13 +172,11 @@ genesis.nTime = 1402197204
 genesis.nNonce = 1939915 
 genesis.hashMerkleRoot = e85e61ae6240a486898d36427284d1bfeb04d56edb137288b9e3614bc437c3b0
 genesis.GetHash = 0000092c4440834fd6f231f54a8dbc3e989091277e4be49cf28b7f62b0385b75
-
         */
 
         assert(genesis.hashMerkleRoot == uint256("0xe85e61ae6240a486898d36427284d1bfeb04d56edb137288b9e3614bc437c3b0"));
         assert(hashGenesisBlock == uint256("0x0000092c4440834fd6f231f54a8dbc3e989091277e4be49cf28b7f62b0385b75"));
 
-        vSeeds.push_back(CDNSSeedData("earlz.net", "earlz.net"));
         vSeeds.push_back(CDNSSeedData("seed1.fractalcoin.net", "seed1.fractalcoin.net"));
         vSeeds.push_back(CDNSSeedData("seed2.fractalcoin.net", "seed2.fractalcoin.net"));
         vSeeds.push_back(CDNSSeedData("seed3.fractalcoin.net", "seed3.fractalcoin.net"));
@@ -187,7 +185,7 @@ genesis.GetHash = 0000092c4440834fd6f231f54a8dbc3e989091277e4be49cf28b7f62b0385b
         vSeeds.push_back(CDNSSeedData("seed6.fractalcoin.net", "seed6.fractalcoin.net"));
         vSeeds.push_back(CDNSSeedData("seed7.fractalcoin.net", "seed7.fractalcoin.net"));
         vSeeds.push_back(CDNSSeedData("seed8.fractalcoin.net", "seed8.fractalcoin.net"));
-        vSeeds.push_back(CDNSSeedData("testnet.fractalcoin.net", "testnet.fractalcoin.net"));
+        vSeeds.push_back(CDNSSeedData("earlz.net", "earlz.net"));
 
         // Workaround for Boost not being quite compatible with C++11;
         std::vector<unsigned char> pka = list_of(36);
@@ -297,7 +295,6 @@ genesis.GetHash = 00000202f5e6dfd3764cad1bc6011484d8c3f1df023ece2e6e88b31c87f88d
 
         vFixedSeeds.clear();
         vSeeds.clear();
-        vSeeds.push_back(CDNSSeedData("earlz.net", "earlz.net"));
         vSeeds.push_back(CDNSSeedData("seed1.fractalcoin.net", "seed1.fractalcoin.net"));
         vSeeds.push_back(CDNSSeedData("seed2.fractalcoin.net", "seed2.fractalcoin.net"));
         vSeeds.push_back(CDNSSeedData("seed3.fractalcoin.net", "seed3.fractalcoin.net"));
@@ -306,6 +303,8 @@ genesis.GetHash = 00000202f5e6dfd3764cad1bc6011484d8c3f1df023ece2e6e88b31c87f88d
         vSeeds.push_back(CDNSSeedData("seed6.fractalcoin.net", "seed6.fractalcoin.net"));
         vSeeds.push_back(CDNSSeedData("seed7.fractalcoin.net", "seed7.fractalcoin.net"));
         vSeeds.push_back(CDNSSeedData("seed8.fractalcoin.net", "seed8.fractalcoin.net"));
+        vSeeds.push_back(CDNSSeedData("testnet.fractalcoin.net", "testnet.fractalcoin.net"));
+        vSeeds.push_back(CDNSSeedData("earlz.net", "earlz.net"));
 
         // Boost sucks, and should not be used. Workaround for Boost not being compatible with C++11;
         
