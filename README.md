@@ -12,7 +12,7 @@ The key features of Fractalcoin:
 
 * X11 Proof of work (low power, cool hardware, ASIC resistant, etc)
 * One minute block times
-* Digishield is used initially for difficulty adjustment. After block 40322, Slingshield is used for difficulty adjustment
+* Digishield is used initially for difficulty adjustment. After block 40352, Slingshield is used for difficulty adjustment
 * 90% of coins are minted in the first 28 days of mining (hence, very slow inflation rate after 28 days)
 * 1 Million coins total
 * After 28 days, mandatory transaction fees of 0.1-0.5%, to ensure mining remains profitable without coin supply inflation
