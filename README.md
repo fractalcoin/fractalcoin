@@ -21,7 +21,7 @@ The key features of Fractalcoin:
 * Small 0.5% premine
 
 
-http://fractalcoin.net/
+http://fractalco.in/
 
 ## License
 Fractalcoin is released under the terms of the MIT license. See [COPYING](COPYING)
