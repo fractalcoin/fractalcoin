@@ -1145,7 +1145,8 @@ int64_t GetBlockValue(int nHeight, int64_t nFees, uint256 prevHash)
 {
     //1M coins total. 5000 premine, 40 per block after, etc etc
     int64_t reward = 10 * COIN;
-    int firstreward=1*60*24 + 1; //first day of mining (plus 1 block, for premine block)
+    int adjust=30+1; //30 blocks of zero rewards, to adjust difficulty and ensure fair launch (plus 1 for premine)
+    int firstreward=adjust+1*60*24; //first day of mining 
     int secondreward=firstreward+(13*60*24); //next 13 days of mining
     int thirdreward=secondreward+(13*60*24); //next 13 days of mining
     int fourthreward=thirdreward+(1*60*24); //last day of "primary mining"
@@ -1153,6 +1154,10 @@ int64_t GetBlockValue(int nHeight, int64_t nFees, uint256 prevHash)
     if(nHeight==1)
     {
         return 500*reward; //premine of 5000 coins, 0.5% of cap
+    }
+    else if(nHeight < adjust)
+    {
+        return 0;
     }
     else if(nHeight < firstreward)
     {
@@ -1298,7 +1303,7 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlock *pb
        if the block containing your spend was mined, it would replace your weaker block. So, this makes 1 confirmation transactions significantly safer.
     */
     int64_t adjust=0;
-    if(pindexLast->nHeight > 40323) //don't activate til rewards drop
+    if(pindexLast->nHeight > 40353) //don't activate til rewards drop
     {
         const static int64_t stepcount=12;
         //min fees: 0.1, 0.2, etc etc corresponding to 1% increase, 2% increase etc

@@ -36,12 +36,13 @@ Development is ongoing and the development team as well as other volunteers can 
 The reward schedule is very fast and vigurous, in order to get the high rate of inflation out of the way as soon as possible.
 
 * 1st block:  5000 FRAC, premined for support and development
-* 2-1441 (1 day): 40 FRAC, to spur excitement for the first day of mining
-* 1442-20161 (13 days): 20 FRAC
-* 20162-38882(13 days): 10 FRAC
-* 38883-40322(1 day): 40 FRAC, to give people that missed out on the first day of mining a final chance to get big blocks
-* 40323-318200(about 221 days): 1 FRAC (percentage based transaction fees should make it so that average reward is closer to 5-15 coins)
-* 318201 and up: 0 FRAC (again, percentage fees mean that significant rewards will still be seen)
+* 2-31: 0 FRAC, zero reward blocks to allow for a fair launch with no instamining while difficulty catches up to network
+* 32-1471 (1 day): 40 FRAC, to spur excitement for the first day of mining
+* 1472-20191 (13 days): 20 FRAC
+* 20192-38912(13 days): 10 FRAC
+* 38913-40352(1 day): 40 FRAC, to give people that missed out on the first day of mining a final chance to get big blocks
+* 40353-318230(about 221 days): 1 FRAC (percentage based transaction fees should make it so that average reward is closer to 5-15 coins)
+* 318231 and up: 0 FRAC (again, percentage fees mean that significant rewards will still be seen)
 
 ## Slingshield
 
