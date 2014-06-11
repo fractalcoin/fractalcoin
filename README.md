@@ -1,7 +1,7 @@
 # Fractalcoin Core [FRAC]
 ==========================
 
-![Fractalcoin](http://static.tumblr.com/ppdj5y9/Ae9mxmxtp/300coin.png)
+![Fractalcoin](http://i.imgur.com/LCv2wcn.png)
 
 ## What is Fractalcoin?
 Fractalcoin is a cryptocurrency like Bitcoin, although with many key differences. Fractalcoin's wallet is forked from Bitcoin 0.9.2, and thus has a build process slightly different from most altcoins.
@@ -68,20 +68,6 @@ This helps to ensure Slingshield works as expected, ensures the network stays st
 ## Low inflation
 
 After 28 days, Fractalcoin's inflation rate drops to around 16%/year, and somewhere in that year, the inflation rate actually drops to zero. Fractalcoin's very fast schedule to zero inflation ensures that the price will stay stable, while percentage based transaction fees ensure that it will forever have a strong network.  
-
-## Premine
-
-To reward the founders and developers helping to make this coin possible (and the projected fair launch meaning we can't ninja mine), there is a 0.5% premine, or 5000 FRAC. 
-
-It is distributed as so:
-
-* 1000 coins each to the three founders of the coin (developer, graphics/media, marketing)
-* 1000 to the external contributers
-** 250 coins to Mac wallet compiler
-** 250 coins to Debian wallet package compiler
-** 250 coins for hosting and other infrastructure
-** 250 coins reserved (needed?)
-* 1000 coins reserved for promotions, giveaways, and bounties
 
 
 ##  Building fractalcoind/fractalcoin-cli/fractalcoin-qt
