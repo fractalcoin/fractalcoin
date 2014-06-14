@@ -1,0 +1,6 @@
+fractalcoin-qt usr/bin
+share/pixmaps/fractalcoin32.xpm usr/share/pixmaps
+share/pixmaps/fractalcoin16.xpm usr/share/pixmaps
+share/pixmaps/fractalcoin128.png usr/share/pixmaps
+debian/fractalcoin-qt.desktop usr/share/applications
+debian/fractalcoin-qt.protocol usr/share/kde4/services/
