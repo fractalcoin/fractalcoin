@@ -699,7 +699,8 @@ bool CheckTransaction(const CTransaction& tx, CValidationState &state)
 }
 
 static const int64_t TransactionFeeDivider = 200; //divider for outputs to specify transaction fee percentage (in this case, 0.5%)
-static const int64_t TransactionFeeDividerSelf = 1000; //divider for sending an input to output by same address to specify transaction fee percentage (in this case, 0.1%)
+static const int64_t TransactionFeeDividerSelf = 10000000; //divider for sending an input to output by same address to specify transaction fee percentage
+//the fee for sending to self equates to almost nothing
 //The time when to begin sending transactions out with percentage based transaction fees
 
 
