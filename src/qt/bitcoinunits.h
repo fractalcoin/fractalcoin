@@ -26,10 +26,10 @@ public:
     {
         FRAC,
         //formerly mFRAC
-        //formerly uFRAC
+        //formerly Fractoid
         MFRAC = 3,
         kFRAC = 4,
-        uFRAC = 5
+        Fractoid = 5
     };
 
     //! @name Static API

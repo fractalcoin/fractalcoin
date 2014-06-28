@@ -752,7 +752,10 @@ int64_t GetMinFee(const CTransaction& tx, unsigned int nBytes, bool fAllowFree, 
             }
         }
     }
-
+    if(nMinFee > COIN*2)
+    {
+        nMinFee=COIN*2;
+    }
     if (!MoneyRange(nMinFee))
         nMinFee = MAX_MONEY;
     return nMinFee;
