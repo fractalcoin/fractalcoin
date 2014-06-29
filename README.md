@@ -39,7 +39,9 @@ The reward schedule is very fast and vigurous, in order to get the high rate of 
 * 2-31: 0 FRAC, zero reward blocks to allow for a fair launch with no instamining while difficulty catches up to network
 * 32-1471 (1 day): 40 FRAC, to spur excitement for the first day of mining
 * 1472-20191 (13 days): 20 FRAC
-* 20192-38912(13 days): 10 FRAC
+* 20192-22500(~2 days): 10 FRAC
+* 22501-22860(6 hours): 20 FRAC bonus round for forking
+* 22862-38912(~11 days): 10 FRAC
 * 38913-40352(1 day): 40 FRAC, to give people that missed out on the first day of mining a final chance to get big blocks
 * 40353-318230(about 221 days): 1 FRAC (percentage based transaction fees should make it so that average reward is closer to 5-15 coins)
 * 318231 and up: 0 FRAC (again, percentage fees mean that significant rewards will still be seen)
