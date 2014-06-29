@@ -1,0 +1,16 @@
+v1.1.0
+
+The following things were implemented or changed
+
+* Percentage based fees were changed to practially nothing for change outputs
+* There is now a maximum transaction fee of 2 FRAC, ensuring legacy infrastructure can easily adopt Fractalcoin
+* Properly reward miners for transaction fees
+* Hard fork at block 22,500 for an about 6 hour bonus round of 20 FRAC rewards
+* Use OpenSSL 1.0.1h for binaries 
+* Merge [PR#4365](https://github.com/bitcoin/bitcoin/pull/4365) from upstream Bitcoin, allowing more elaborate multisignature transactions to be relayed and mined
+* Add checkpoint at block 16,000
+* Rename uFRAC to Fractoid in the GUI
+
+v1.0.0
+
+Initial release
