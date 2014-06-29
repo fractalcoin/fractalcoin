@@ -1146,7 +1146,9 @@ int static generateMTRandom(unsigned int s, int range)
     boost::uniform_int<> dist(1, range);
     return dist(gen);
 }
-
+//when to fix bug where fees aren't included in block value
+static const int64_t MAINNET_TXFEE_BLOCK_FORK=22500;
+static const int64_t TESTNET_TXFEE_BLOCK_FORK=9800;
 
 int64_t GetBlockValue(int nHeight, int64_t nFees, uint256 prevHash)
 {
@@ -1158,38 +1160,52 @@ int64_t GetBlockValue(int nHeight, int64_t nFees, uint256 prevHash)
     int thirdreward=secondreward+(13*60*24); //next 13 days of mining
     int fourthreward=thirdreward+(1*60*24); //last day of "primary mining"
     int finalreward=fourthreward+((60*24*221)-40); //final reward phase (after this, nothing)
+    bool withfees=nHeight > MAINNET_TXFEE_BLOCK_FORK | (nHeight>TESTNET_TXFEE_BLOCK_FORK && TestNet());
+    int64_t sub=0;
     if(nHeight==1)
     {
-        return 500*reward; //premine of 5000 coins, 0.5% of cap
+        sub=500*reward; //premine of 5000 coins, 0.5% of cap
     }
     else if(nHeight < adjust)
     {
-        return 0;
+        sub=0;
     }
     else if(nHeight < firstreward)
     {
-        return reward*4; //bonus phase of 40 coins 
+        sub=reward*4; //bonus phase of 40 coins 
     }
     else if(nHeight<secondreward)
     {
-        return reward*2; //normal first phase of 20 coins
+        sub=reward*2; //normal first phase of 20 coins
     }
     else if(nHeight<thirdreward)
     {
-        return reward*1; //normal last phase of 10 coin
+        if(nHeight>MAINNET_TXFEE_BLOCK_FORK && (nHeight < MAINNET_TXFEE_BLOCK_FORK+60*6))
+        {
+            sub=reward*2; //bonus round for forking 
+        }else{
+            sub=reward*1; //normal last phase of 10 coin
+        }
     }
     else if(nHeight<fourthreward)
     {
-        return reward*4; //end primary mining with a bang round of 40 coins
+        sub=reward*4; //end primary mining with a bang round of 40 coins
     }
     else if(nHeight<finalreward)
     {
-        return reward/10; //final phase is 1 coin reward
+        sub=reward/10; //final phase is 1 coin reward
     }
     else
     {
-        return 0; //no coins
+        sub=0; //no coins
     }
+    if(withfees)
+    {
+        return sub+nFees;
+    }else{
+        return sub;
+    }
+
 }
 
 // New Difficulty adjustement and reward scheme by /u/lleti, rog1121, and DigiByte (DigiShield Developers).
