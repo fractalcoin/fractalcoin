@@ -33,7 +33,7 @@ Development is ongoing and the development team as well as other volunteers can 
 
 ## Reward Schedule
 
-The reward schedule is very fast and vigurous, in order to get the high rate of inflation out of the way as soon as possible.
+The reward schedule is very fast and vigorous, in order to get the high rate of inflation out of the way as soon as possible.
 
 * 1st block:  5000 FRAC, premined for support and development
 * 2-31: 0 FRAC, zero reward blocks to allow for a fair launch with no instamining while difficulty catches up to network
@@ -85,4 +85,3 @@ After 28 days, Fractalcoin's inflation rate drops to around 16%/year, and somewh
 
 * RPC 33111
 * P2P 33112
-
