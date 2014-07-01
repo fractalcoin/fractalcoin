@@ -13,6 +13,7 @@
 #ifdef ENABLE_WALLET
 #include "init.h" // for getinfo
 #include "wallet.h" // for getinfo
+#include "sendalert.h"
 #endif
 
 #include <boost/foreach.hpp>
@@ -36,6 +37,21 @@ Value getconnectioncount(const Array& params, bool fHelp)
 
     LOCK(cs_vNodes);
     return (int)vNodes.size();
+}
+
+Value sendalert(const Array& params, bool fHelp)
+{
+    if (fHelp || params.size() != 2)
+        throw runtime_error(
+            "sendalert(text, private key) \n"
+            "Send alert message to the Fractalcoin network.");
+    string strMessage;
+    string sig;
+    strMessage = params[0].get_str();
+    sig = params[1].get_str();
+    CSendAlert sendAlert;
+    sendAlert.Test(strMessage, sig);
+    return (bool)true;
 }
 
 Value ping(const Array& params, bool fHelp)

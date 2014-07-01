@@ -29,6 +29,7 @@ DIST_SUBDIRS = . qt
 BITCOIN_CORE_H = \
   addrman.h \
   alert.h \
+  sendalert.h \
   allocators.h \
   base58.h bignum.h \
   bloom.h \
@@ -95,6 +96,7 @@ version.o: obj/build.h
 libbitcoin_server_a_SOURCES = \
   addrman.cpp \
   alert.cpp \
+  sendalert.cpp \
   rpcserver.cpp \
   bloom.cpp \
   chainparams.cpp \
