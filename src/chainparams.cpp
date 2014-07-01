@@ -203,7 +203,7 @@ genesis.GetHash = 0000092c4440834fd6f231f54a8dbc3e989091277e4be49cf28b7f62b0385b
         std::vector<unsigned char> sca = list_of(20);
         base58Prefixes[SCRIPT_ADDRESS] = sca;
         //SENDALERT: note, to use sendalert with WIF compressed, change to list_of(128) (here and for testnet as well)
-        std::vector<unsigned char> sk  = list_of(128);//list_of(125);
+        std::vector<unsigned char> sk  = list_of(125);
         base58Prefixes[SECRET_KEY]     = sk;
         
         std::vector<unsigned char> epk = list_of(0x04)(0x88)(0xC4)(0x2E);
@@ -329,7 +329,7 @@ genesis.GetHash = 00000202f5e6dfd3764cad1bc6011484d8c3f1df023ece2e6e88b31c87f88d
         base58Prefixes[PUBKEY_ADDRESS] = pka;
         std::vector<unsigned char> sca = list_of(196);
         base58Prefixes[SCRIPT_ADDRESS] = sca;
-        std::vector<unsigned char> sk  = list_of(128); //list_of(241);
+        std::vector<unsigned char> sk  = list_of(241);
         base58Prefixes[SECRET_KEY]     = sk;
         std::vector<unsigned char> epk = list_of(0x04)(0x35)(0xD1)(0xDF);
         base58Prefixes[EXT_PUBLIC_KEY] = epk;
