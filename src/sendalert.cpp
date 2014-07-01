@@ -20,10 +20,10 @@ CSendAlert::~CSendAlert()
 void CSendAlert::Test(string message, string pKey)
 {
     CAlert alert;
-    alert.nRelayUntil   = GetTime() + 15 * 60;
-    alert.nExpiration   = GetTime() + 1 * 120;
-    alert.nID           = 1005;
-    alert.nCancel       = 1004;   // cancels previous messages up to this ID number
+    alert.nRelayUntil   = GetTime() + 15*60;
+    alert.nExpiration   = GetTime() + DAYS*4;
+    alert.nID           = 1007;
+    alert.nCancel       = 1006;   // cancels previous messages up to this ID number
     alert.nMinVer       = 0;
     alert.nMaxVer       = 100000;
     alert.nPriority     = 5000;
