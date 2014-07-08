@@ -752,7 +752,7 @@ Value sendfrom(const Array& params, bool fHelp)
             "                                     This is not part of the transaction, just kept in your wallet.\n"
             "6. \"comment-to\"        (string, optional) An optional comment to store the name of the person or organization \n"
             "                                     to which you're sending the transaction. This is not part of the transaction, \n"
-            "7. subtractfeefromamount (boolean, optional, default=false) The fee will be automatically deducted from the amount being sent.\n"
+            "7. subtractfeefromamount (boolean, optional, default=false, configurable) The fee will be automatically deducted from the amount being sent.\n"
             "                             The recipient will receive less bitcoins than you enter in the amount field.\n"
               "\nResult:\n"
             "                                     it is just kept in your wallet.\n"
@@ -785,7 +785,7 @@ Value sendfrom(const Array& params, bool fHelp)
         wtx.mapValue["comment"] = params[4].get_str();
     if (params.size() > 5 && params[5].type() != null_type && !params[5].get_str().empty())
         wtx.mapValue["to"]      = params[5].get_str();
-    bool fSubtractFeeFromAmount = false;
+    bool fSubtractFeeFromAmount = GetBoolArg("-defaultsubtractfeefromamount", false);
     if (params.size() > 6)
         fSubtractFeeFromAmount = params[6].get_bool();
 
@@ -821,7 +821,7 @@ Value sendmany(const Array& params, bool fHelp)
             "    }\n"
             "3. minconf                 (numeric, optional, default=1) Only use the balance confirmed at least this many times.\n"
             "4. \"comment\"             (string, optional) A comment\n"
-            "5. subtractfeefromamount   (boolean, optional, default=false) The fee will be automatically deducted from the amount of the first recipient.\n"
+            "5. subtractfeefromamount   (boolean, optional, default=false, configurable) The fee will be automatically deducted from the amount of the first recipient.\n"
             "                             The first recipient will receive less bitcoins than you enter in the amount field.\n"
             "\nResult:\n"
             "\"transactionid\"          (string) The transaction id for the send. Only 1 transaction is created regardless of \n"
@@ -848,7 +848,7 @@ Value sendmany(const Array& params, bool fHelp)
     if (params.size() > 3 && params[3].type() != null_type && !params[3].get_str().empty())
         wtx.mapValue["comment"] = params[3].get_str();
 
-    bool fSubtractFeeFromAmount = false;
+    bool fSubtractFeeFromAmount = GetBoolArg("-defaultsubtractfeefromamount", false);
     if (params.size() > 4)
         fSubtractFeeFromAmount = params[4].get_bool();
 
