@@ -1361,17 +1361,21 @@ bool CWallet::CreateTransaction(const vector<pair<CScript, int64_t> >& vecSend,
 
                 double dPriority = 0;
                 // vouts to the payees
+                int feediv=vecSend.size();
                 for (unsigned int i = 0; i < vecSend.size(); i++)
                 {
                      CTxOut txout(vecSend[i].second, vecSend[i].first);
 
-                    // Subtract fee from first recipient
-                    if (fSubtractFeeFromAmount && i == 0)
-                        txout.nValue -= nFeeRet;
+                    // Subtract fee from each recepient (other than change)
+                    if (fSubtractFeeFromAmount)
+                        txout.nValue -= nFeeRet / feediv;
+
+                    if(fSubtractFeeFromAmount && i==0) //first receiver pays the remainder not divisible by output count
+                        txout.nValue -= nFeeRet % feediv; 
 
                     if (txout.IsDust(CTransaction::nMinRelayTxFee))
                     {
-                        if (fSubtractFeeFromAmount && i == 0 && nFeeRet > 0)
+                        if (fSubtractFeeFromAmount && nFeeRet > 0)
                         {
                             if (txout.nValue < 0)
                                 strFailReason = _("The transaction amount is too small to pay the fee");

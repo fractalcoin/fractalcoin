@@ -160,7 +160,7 @@ public:
     {
         // Fractalcoin: IsDust() detection disabled, allows any valid dust to be relayed.
         // The fees imposed on each dust txo is considered sufficient spam deterrant.
-		return (nValue < GetDustThreshold(minRelayTxFee));;
+		return (nValue < GetDustThreshold(minRelayTxFee));
     }
 
     friend bool operator==(const CTxOut& a, const CTxOut& b)
