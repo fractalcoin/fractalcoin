@@ -342,7 +342,7 @@ Value sendtoaddress(const Array& params, bool fHelp)
     if (params.size() > 3 && params[3].type() != null_type && !params[3].get_str().empty())
         wtx.mapValue["to"]      = params[3].get_str();
 
-    bool fSubtractFeeFromAmount = GetBoolArg("-defaultsubtractfeefromamount", false);
+    bool fSubtractFeeFromAmount = GetBoolArg("-defaultsubtractfee", false);
     if (params.size() > 4)
         fSubtractFeeFromAmount = params[4].get_bool();
 
@@ -785,7 +785,7 @@ Value sendfrom(const Array& params, bool fHelp)
         wtx.mapValue["comment"] = params[4].get_str();
     if (params.size() > 5 && params[5].type() != null_type && !params[5].get_str().empty())
         wtx.mapValue["to"]      = params[5].get_str();
-    bool fSubtractFeeFromAmount = GetBoolArg("-defaultsubtractfeefromamount", false);
+    bool fSubtractFeeFromAmount = GetBoolArg("-defaultsubtractfee", false);
     if (params.size() > 6)
         fSubtractFeeFromAmount = params[6].get_bool();
 
@@ -848,7 +848,7 @@ Value sendmany(const Array& params, bool fHelp)
     if (params.size() > 3 && params[3].type() != null_type && !params[3].get_str().empty())
         wtx.mapValue["comment"] = params[3].get_str();
 
-    bool fSubtractFeeFromAmount = GetBoolArg("-defaultsubtractfeefromamount", false);
+    bool fSubtractFeeFromAmount = GetBoolArg("-defaultsubtractfee", false);
     if (params.size() > 4)
         fSubtractFeeFromAmount = params[4].get_bool();
 

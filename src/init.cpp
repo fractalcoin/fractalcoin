@@ -282,6 +282,7 @@ std::string HelpMessage(HelpMessageMode hmm)
     strUsage += "  -walletnotify=<cmd>    " + _("Execute command when a wallet transaction changes (%s in cmd is replaced by TxID)") + "\n";
     strUsage += "  -change=<address>      " + _("Send change only to the specified address(es)") + "\n" +
     strUsage += "  -spendzeroconfchange   " + _("Spend unconfirmed change when sending transactions (default: 1)") + "\n";
+    strUsage += "  -defaultsubtractfee    " + _("Subtract transaction fees from recepient total coins received (default: 0)") + "\n";
 #endif
     strUsage += "\n" + _("Block creation options:") + "\n";
     strUsage += "  -blockminsize=<n>      " + _("Set minimum block size in bytes (default: 0)") + "\n";
