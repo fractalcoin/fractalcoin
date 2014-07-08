@@ -317,7 +317,7 @@ Value sendtoaddress(const Array& params, bool fHelp)
             "4. \"comment-to\"  (string, optional) A comment to store the name of the person or organization \n"
             "                             to which you're sending the transaction. This is not part of the \n"
             "                             transaction, just kept in your wallet.\n"
-            "5. subtractfeefromamount  (boolean, optional, default=false) The fee will be automatically deducted from the amount being sent.\n"
+            "5. subtractfeefromamount  (boolean, optional, default=false, configurable) The fee will be automatically deducted from the amount being sent.\n"
             "                             The recipient will receive less bitcoins than you enter in the amount field.\n"
             "\nResult:\n"
             "\"transactionid\"  (string) The transaction id. (view at https://blockchain.info/tx/[transactionid])\n"
@@ -342,7 +342,7 @@ Value sendtoaddress(const Array& params, bool fHelp)
     if (params.size() > 3 && params[3].type() != null_type && !params[3].get_str().empty())
         wtx.mapValue["to"]      = params[3].get_str();
 
-    bool fSubtractFeeFromAmount = false;
+    bool fSubtractFeeFromAmount = GetBoolArg("-defaultsubtractfeefromamount", false);
     if (params.size() > 4)
         fSubtractFeeFromAmount = params[4].get_bool();
 
