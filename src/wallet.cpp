@@ -1322,7 +1322,8 @@ bool CWallet::SelectCoins(int64_t nTargetValue, set<pair<const CWalletTx*,unsign
 
 
 bool CWallet::CreateTransaction(const vector<pair<CScript, int64_t> >& vecSend,
-                                CWalletTx& wtxNew, CReserveKey& reservekey, int64_t& nFeeRet, std::string& strFailReason, const CCoinControl* coinControl)
+                                CWalletTx& wtxNew, CReserveKey& reservekey, int64_t& nFeeRet, std::string& strFailReason, const CCoinControl* coinControl,
+                                bool fSubtractFeeFromAmount, int64_t* nDustRet)
 {
     int64_t nValue = 0;
     BOOST_FOREACH (const PAIRTYPE(CScript, int64_t)& s, vecSend)
@@ -1351,16 +1352,38 @@ bool CWallet::CreateTransaction(const vector<pair<CScript, int64_t> >& vecSend,
                 wtxNew.vin.clear();
                 wtxNew.vout.clear();
                 wtxNew.fFromMe = true;
+                if (nDustRet)
+                    *nDustRet = 0;
 
-                int64_t nTotalValue = nValue + nFeeRet;
+                int64_t nTotalValue = nValue;
+                if (!fSubtractFeeFromAmount)
+                    nTotalValue += nFeeRet;
+
                 double dPriority = 0;
                 // vouts to the payees
-                BOOST_FOREACH (const PAIRTYPE(CScript, int64_t)& s, vecSend)
+                int feediv=vecSend.size();
+                for (unsigned int i = 0; i < vecSend.size(); i++)
                 {
-                    CTxOut txout(s.second, s.first);
+                     CTxOut txout(vecSend[i].second, vecSend[i].first);
+
+                    // Subtract fee from each recepient (other than change)
+                    if (fSubtractFeeFromAmount)
+                        txout.nValue -= nFeeRet / feediv;
+
+                    if(fSubtractFeeFromAmount && i==0) //first receiver pays the remainder not divisible by output count
+                        txout.nValue -= nFeeRet % feediv; 
+
                     if (txout.IsDust(CTransaction::nMinRelayTxFee))
                     {
-                        strFailReason = _("Transaction amount too small");
+                        if (fSubtractFeeFromAmount && nFeeRet > 0)
+                        {
+                            if (txout.nValue < 0)
+                                strFailReason = _("The transaction amount is too small to pay the fee");
+                            else
+                                strFailReason = _("The transaction amount is too small to send after the fee has been deducted");
+                        }
+                        else
+                            strFailReason = _("Transaction amount too small");
                         return false;
                     }
                     wtxNew.vout.push_back(txout);
@@ -1383,7 +1406,9 @@ bool CWallet::CreateTransaction(const vector<pair<CScript, int64_t> >& vecSend,
                     dPriority += (double)nCredit * (pcoin.first->GetDepthInMainChain()+1);
                 }
 
-                int64_t nChange = nValueIn - nValue - nFeeRet;
+                int64_t nChange = nValueIn - nValue;
+                if (!fSubtractFeeFromAmount)
+                    nChange -= nFeeRet;
                 // The following if statement should be removed once enough miners
                 // have upgraded to the 0.9 GetMinFee() rules. Until then, this avoids
                 // creating free transactions that have change outputs less than
@@ -1433,6 +1458,24 @@ bool CWallet::CreateTransaction(const vector<pair<CScript, int64_t> >& vecSend,
                     }
 
                     CTxOut newTxOut(nChange, scriptChange);
+
+                    // We do not move dust-change to fees, because the sender would end up paying more than requested.
+                    // This would be against the purpose of the all-inclusive feature.
+                    // So instead we raise the change and deduct from the recipient.
+                    if (fSubtractFeeFromAmount && newTxOut.IsDust(CTransaction::nMinRelayTxFee))
+                    {
+                        int64_t nDust = newTxOut.GetDustThreshold(CTransaction::nMinRelayTxFee) - newTxOut.nValue;
+                        newTxOut.nValue += nDust; // raise change until no more dust
+                        wtxNew.vout[0].nValue -= nDust; // subtract from amount
+                        if (wtxNew.vout[0].IsDust(CTransaction::nMinRelayTxFee))
+                        {
+                            strFailReason = _("The transaction amount is too small to send after the fee has been deducted");
+                            return false;
+                        }
+                        if (nDustRet)
+                            *nDustRet = nDust; // report this back to the GUI to show the correct amount in the confirmation dialog
+                    }
+
 
                     // Never create dust outputs; if we would, just
                     // add the dust to the fee.
@@ -1493,11 +1536,12 @@ bool CWallet::CreateTransaction(const vector<pair<CScript, int64_t> >& vecSend,
 }
 
 bool CWallet::CreateTransaction(CScript scriptPubKey, int64_t nValue,
-                                CWalletTx& wtxNew, CReserveKey& reservekey, int64_t& nFeeRet, std::string& strFailReason, const CCoinControl* coinControl)
+                                CWalletTx& wtxNew, CReserveKey& reservekey, int64_t& nFeeRet, std::string& strFailReason, const CCoinControl* coinControl,
+                                bool fSubtractFeeFromAmount)
 {
     vector< pair<CScript, int64_t> > vecSend;
     vecSend.push_back(make_pair(scriptPubKey, nValue));
-    return CreateTransaction(vecSend, wtxNew, reservekey, nFeeRet, strFailReason, coinControl);
+    return CreateTransaction(vecSend, wtxNew, reservekey, nFeeRet, strFailReason, coinControl, fSubtractFeeFromAmount);
 }
 
 // Call after CreateTransaction unless you want to abort
@@ -1550,7 +1594,7 @@ bool CWallet::CommitTransaction(CWalletTx& wtxNew, CReserveKey& reservekey)
 
 
 
-string CWallet::SendMoney(CScript scriptPubKey, int64_t nValue, CWalletTx& wtxNew)
+string CWallet::SendMoney(CScript scriptPubKey, int64_t nValue, CWalletTx& wtxNew, bool fSubtractFeeFromAmount)
 {
     CReserveKey reservekey(this);
     int64_t nFeeRequired;
@@ -1562,9 +1606,9 @@ string CWallet::SendMoney(CScript scriptPubKey, int64_t nValue, CWalletTx& wtxNe
         return strError;
     }
     string strError;
-    if (!CreateTransaction(scriptPubKey, nValue, wtxNew, reservekey, nFeeRequired, strError))
+    if (!CreateTransaction(scriptPubKey, nValue, wtxNew, reservekey, nFeeRequired, strError, NULL, fSubtractFeeFromAmount))
     {
-        if (nValue + nFeeRequired > GetBalance())
+        if (!fSubtractFeeFromAmount && nValue + nFeeRequired > GetBalance())
             strError = strprintf(_("Error: This transaction requires a transaction fee of at least %s because of its amount, complexity, or use of recently received funds!"), FormatMoney(nFeeRequired));
         LogPrintf("SendMoney() : %s\n", strError);
         return strError;
@@ -1578,7 +1622,7 @@ string CWallet::SendMoney(CScript scriptPubKey, int64_t nValue, CWalletTx& wtxNe
 
 
 
-string CWallet::SendMoneyToDestination(const CTxDestination& address, int64_t nValue, CWalletTx& wtxNew)
+string CWallet::SendMoneyToDestination(const CTxDestination& address, int64_t nValue, CWalletTx& wtxNew, bool fSubtractFeeFromAmount)
 {
     // Check amount
     if (nValue <= 0)
@@ -1590,7 +1634,7 @@ string CWallet::SendMoneyToDestination(const CTxDestination& address, int64_t nV
     CScript scriptPubKey;
     scriptPubKey.SetDestination(address);
 
-    return SendMoney(scriptPubKey, nValue, wtxNew);
+    return SendMoney(scriptPubKey, nValue, wtxNew, fSubtractFeeFromAmount);
 }
 
 

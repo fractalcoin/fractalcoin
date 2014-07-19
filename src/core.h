@@ -151,11 +151,16 @@ public:
 
     uint256 GetHash() const;
 
-    bool IsDust(int64_t nMinRelayTxFee) const
+    int64_t GetDustThreshold(uint64_t minRelayTxFee) const
+    {
+        //method signature kept "messy" for bitcoin compatibility
+        return 1;
+    }
+    bool IsDust(uint64_t minRelayTxFee) const
     {
         // Fractalcoin: IsDust() detection disabled, allows any valid dust to be relayed.
         // The fees imposed on each dust txo is considered sufficient spam deterrant.
-		return false;
+		return (nValue < GetDustThreshold(minRelayTxFee));
     }
 
     friend bool operator==(const CTxOut& a, const CTxOut& b)
