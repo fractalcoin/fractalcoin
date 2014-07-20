@@ -2,7 +2,7 @@ v1.2.0
 
 Features:
 
-1. Added `defaultsubtractfees` option, to subtract fees from the total amount sent. 
+1. Added `defaultsubtractfee` option, to subtract fees from the total amount sent. 
 
 Bug fixes:
 
