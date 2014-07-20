@@ -1488,7 +1488,7 @@ void CheckForkWarningConditionsOnNewFork(CBlockIndex* pindexNewForkTip)
         pindexBestForkBase = pfork;
     }
 
-    //CheckForkWarningConditions();
+    CheckForkWarningConditions();
 }
 
 void Misbehaving(NodeId pnode, int howmuch)
@@ -1527,7 +1527,7 @@ void static InvalidChainFound(CBlockIndex* pindexNew)
     LogPrintf("InvalidChainFound:  current best=%s  height=%d  log2_work=%.8g  date=%s\n",
       chainActive.Tip()->GetBlockHash().ToString(), chainActive.Height(), log(chainActive.Tip()->nChainWork.getdouble())/log(2.0),
       DateTimeStrFormat("%Y-%m-%d %H:%M:%S", chainActive.Tip()->GetBlockTime()));
-    //CheckForkWarningConditions();
+    CheckForkWarningConditions();
 }
 
 void static InvalidBlockFound(CBlockIndex *pindex, const CValidationState &state) {
@@ -2269,13 +2269,13 @@ bool AddToBlockIndex(CBlock& block, CValidationState& state, const CDiskBlockPos
     if (pindexNew == chainActive.Tip())
     {
         // Clear fork warning if its no longer applicable
-        //CheckForkWarningConditions();
+        CheckForkWarningConditions();
         // Notify UI to display prev block's coinbase if it was ours
         static uint256 hashPrevBestCoinBase;
         g_signals.UpdatedTransaction(hashPrevBestCoinBase);
         hashPrevBestCoinBase = block.GetTxHash(0);
-    } else;
-        //CheckForkWarningConditionsOnNewFork(pindexNew);
+    } else
+        CheckForkWarningConditionsOnNewFork(pindexNew);
 
     if (!pblocktree->Flush())
         return state.Abort(_("Failed to sync block index"));
