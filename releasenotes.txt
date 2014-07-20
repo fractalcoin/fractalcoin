@@ -1,3 +1,19 @@
+v1.2.0
+
+Features:
+
+1. Added `defaultsubtractfees` option, to subtract fees from the total amount sent. 
+
+Bug fixes:
+
+1. Fix safemode so that it doesn't cause mining to stop 
+2. Fix mac wallet installer background to say Fractalcoin 
+
+Maintenance:
+
+1. Added checkpoints
+
+
 v1.1.0
 
 The following things were implemented or changed
