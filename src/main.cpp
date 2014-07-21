@@ -1369,6 +1369,27 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlock *pb
     LogPrintf("nTargetTimespan = %d    nActualTimespan = %d\n", retargetTimespan, nActualTimespan);
     LogPrintf("Before: %08x  %s\n", pindexLast->nBits, CBigNum().SetCompact(pindexLast->nBits).getuint256().ToString());
     LogPrintf("After:  %08x  %s\n", bnNew.GetCompact(), bnNew.getuint256().ToString());
+    // Floating point number that is a multiple of the minimum difficulty,
+    // minimum difficulty = 1.0.
+    //uncomment to have daemon dump the difficutly of the next block to stdout
+    /*unsigned int bits=bnNew.GetCompact();
+
+    int nShift = (bits >> 24) & 0xff;
+
+    double dDiff =
+        (double)0x0000ffff / (double)(bits & 0x00ffffff);
+
+    while (nShift < 29)
+    {
+        dDiff *= 256.0;
+        nShift++;
+    }
+    while (nShift > 29)
+    {
+        dDiff /= 256.0;
+        nShift--;
+    }
+    cout <<"diff123: " << dDiff << endl;*/
 
     return bnNew.GetCompact();
 }
