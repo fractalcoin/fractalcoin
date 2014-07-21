@@ -3,6 +3,7 @@ v1.2.0
 Features:
 
 1. Added `defaultsubtractfee` option, to subtract fees from the total amount sent. 
+2. Reduce time before new transactions will be put into the current block being mined from 5 seconds to 1 second 
 
 Bug fixes:
 
